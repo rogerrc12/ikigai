@@ -1,45 +1,34 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
-import "./layout.css"
+import IndexHeader from "./IndexHeader"
+import Footer from "./footer"
+import IndexFooter from "./IndexFooter"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+const Layout = ({ location, children, sectionTitle }) => {
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      {/* <div className="preloader">
+        <div className="preloader_image"></div>
+      </div> */}
+
+      <div id="canvas">
+        <div id="box_wrapper">
+          {location !== "/" ? (
+            <Header sectionTitle={sectionTitle} />
+          ) : (
+            <IndexHeader />
+          )}
+
+          {location === "/blog" ? children : <main>{children}</main>}
+
+          {location !== "/" ? <Footer /> : <IndexFooter />}
+        </div>
       </div>
+
+      <a href="#" id="toTop">
+        <span id="toTopHover" style={{ opacity: "0" }}></span>To Top
+      </a>
     </>
   )
 }
