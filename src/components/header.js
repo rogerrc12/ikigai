@@ -1,11 +1,11 @@
 import React, { useState, useRef } from "react"
 import { Link } from "gatsby"
-import Logo from "../assets/images/logo.png"
+import Logo from "../assets/images/logo.svg"
 
 const Header = ({ sectionTitle }) => {
   const [active, setActive] = useState(false)
   const headerRef = useRef(),
-    toggleRef = useRef()
+        toggleRef = useRef();
 
   const onToggle = () => setActive(prevState => !prevState)
 

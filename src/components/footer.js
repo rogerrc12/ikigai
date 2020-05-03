@@ -1,5 +1,5 @@
 import React from "react"
-import FooterLogo from "../assets/images/footer_logo.png"
+import FooterLogo from "../assets/images/footer_logo.svg"
 
 const footer = () => {
   return (
@@ -10,7 +10,7 @@ const footer = () => {
             <div className="row">
               <div className="divider-20 d-none d-xl-block" />
               <div
-                className="col-md-12 mt-4 text-center animate"
+                className="col-md-12 mt-4 text-center animate footer_logo"
                 data-animation="fadeInUp"
               >
                 <img

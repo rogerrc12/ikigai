@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
-import Logo from "../assets/images/logo.png"
+import Logo from "../assets/images/logo.svg"
 import { Link } from "gatsby"
 
 const IndexHeader = () => {
@@ -44,7 +44,7 @@ const IndexHeader = () => {
             </div>
             <div className="col-lg-6 col-3 text-center d-none d-lg-block">
               <div className="header_text small-text">
-                <p>jasonanderson@support.com</p>
+                <p>info@ikigaimarketer.com</p>
               </div>
             </div>
           </div>

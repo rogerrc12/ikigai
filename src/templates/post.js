@@ -1,18 +1,34 @@
 import React from "react"
 import Layout from "../components/layout"
-import Head from "../components/head"
+import Head from "../components/head";
+import { graphql } from 'gatsby';
 
-const Post = () => {
+export const query = graphql`
+  query ($slug: String!){
+    wordpress {
+      postBy(slug: $slug) {
+        author { name avatar { url width } }
+        date
+        content
+        tags { nodes { name } }
+      }
+    }
+  }
+`;
+
+const Post = ({ data }) => {
+  console.log(data);
+
   return (
     <Layout location="/blog" sectionTitle="blog">
       <Head title="blog" />
       <section className="ls s-pt-50 s-pb-130 c-gutter-60 post5">
         <div className="container">
           <div className="row">
-            <div class="d-none d-lg-block divider-65"></div>
-            <article class="vertical-item post type-post status-publish format-standard has-post-thumbnail">
+            <div className="d-none d-lg-block divider-65"></div>
+            <article className="vertical-item post type-post status-publish format-standard has-post-thumbnail">
               <div className="post-thumb">
-                <img src="images/gallery/08.jpg" alt />
+                <img src="images/gallery/08.jpg" alt="test" />
               </div>
               <div className="item-content hero-bg blog-post">
                 <div className="entry-content">
@@ -47,22 +63,22 @@ const Post = () => {
                   <div className="media-item images-item">
                     <div className="row c-mb-10 c-gutter-10">
                       <div className="col-6 col-md-4">
-                        <img src="images/gallery/01.jpg" alt />
+                        <img src="images/gallery/01.jpg" alt="test" />
                       </div>
                       <div className="col-6 col-md-4">
-                        <img src="images/gallery/02.jpg" alt />
+                        <img src="images/gallery/02.jpg" alt="test" />
                       </div>
                       <div className="col-6 col-md-4">
-                        <img src="images/gallery/03.jpg" alt />
+                        <img src="images/gallery/03.jpg" alt="test" />
                       </div>
                       <div className="col-6 col-md-4">
-                        <img src="images/gallery/04.jpg" alt />
+                        <img src="images/gallery/04.jpg" alt="test" />
                       </div>
                       <div className="col-6 col-md-4">
-                        <img src="images/gallery/05.jpg" alt />
+                        <img src="images/gallery/05.jpg" alt="test" />
                       </div>
                       <div className="col-6 col-md-4">
-                        <img src="images/gallery/06.jpg" alt />
+                        <img src="images/gallery/06.jpg" alt="test" />
                       </div>
                     </div>
                   </div>
@@ -93,7 +109,7 @@ const Post = () => {
               </div>
               <div className="entry-meta ds with_padding">
                 <div className="entry-avatar">
-                  <img src="images/team/04.jpg" alt />
+                  <img src="images/team/04.jpg" alt="test" />
                 </div>
                 <div className="entry-author">
                   <span className="author vcard">
@@ -140,7 +156,7 @@ const Post = () => {
                   </a>
                 </div>
                 <div className="entry-blog-share text-right">
-                  <a href="#">
+                  <a href="/">
                     <i className="fa fa-share-alt" />
                   </a>
                 </div>

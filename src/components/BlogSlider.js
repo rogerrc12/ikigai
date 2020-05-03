@@ -21,6 +21,8 @@ const BlogSlider = () => {
     speed: 1000,
     arrows: true,
     fade: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
     swipeToSlide: true,

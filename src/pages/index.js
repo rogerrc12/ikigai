@@ -95,7 +95,7 @@ const IndexPage = ({ data }) => {
                         data-animation="fadeInDown"
                       >
                         <h2 className="text-uppercase intro_featured_word">
-                          Jason
+                          Agencia Creativa
                         </h2>
                       </div>
                       <div
@@ -103,7 +103,7 @@ const IndexPage = ({ data }) => {
                         data-animation="fadeInUp"
                       >
                         <h2 className="text-uppercase intro_featured_word name">
-                          Anders
+                          Digital
                         </h2>
                       </div>
                       <div
@@ -111,16 +111,16 @@ const IndexPage = ({ data }) => {
                         data-animation="fadeIn"
                       >
                         <p className="text-uppercase intro_after_featured_word">
-                          entrepreneur
+                          Desarrollando tus ideas
                         </p>
                       </div>
                       <div
                         className="intro_layer page-bottom animate"
                         data-animation="pullDown"
                       >
-                        <a className="btn btn-maincolor" href="about.html">
-                          Hire me
-                        </a>
+                        <Link className="btn btn-maincolor" to="/contact">
+                          contáctanos
+                        </Link>
                       </div>
                     </div>
                     {/* eof .intro_layers */}
@@ -510,7 +510,7 @@ const IndexPage = ({ data }) => {
                   <div className="info">
                     <header>
                       <h6>
-                        <a href="#">
+                        <a href="/">
                           Annual Report
                           <br />
                           2017-2018
@@ -530,7 +530,7 @@ const IndexPage = ({ data }) => {
                   <div className="info">
                     <header>
                       <h6>
-                        <a href="#">Tools of Trading: Modern Marketing</a>
+                        <a href="/">Tools of Trading: Modern Marketing</a>
                       </h6>
                     </header>
                     <p>
@@ -538,7 +538,7 @@ const IndexPage = ({ data }) => {
                       sed diam numy eirmod.
                     </p>
                     <p className="small-text link-a">
-                      <a href="#">Buy It Now!</a>
+                      <a href="/">Buy It Now!</a>
                     </p>
                   </div>
                 </div>
@@ -549,7 +549,7 @@ const IndexPage = ({ data }) => {
                   <div className="info">
                     <header>
                       <h6>
-                        <a href="#">Business Magazine: Design</a>
+                        <a href="/">Business Magazine: Design</a>
                       </h6>
                     </header>
                     <p>
@@ -557,7 +557,7 @@ const IndexPage = ({ data }) => {
                       kasd gubergren.
                     </p>
                     <p className="small-text link-a">
-                      <a href="#">Buy It Now!</a>
+                      <a href="/">Buy It Now!</a>
                     </p>
                   </div>
                 </div>
@@ -588,7 +588,7 @@ const IndexPage = ({ data }) => {
               <img src={VerticalLine} alt="vertical Line" />
               <div>
                 <div className="divider-40" />
-                <a href="#" className="btn btn-outline-maincolor">
+                <a href="/" className="btn btn-outline-maincolor">
                   Let’s Talk!
                 </a>
                 <div className="divider-30" />

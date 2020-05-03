@@ -1,5 +1,5 @@
 import React from "react"
-import Icon from "../assets/img/logo1.png"
+import Icon from "../assets/img/icon.svg"
 
 const IndexFooter = () => {
   return (
@@ -38,8 +38,8 @@ const IndexFooter = () => {
                   <img src={Icon} alt="Icono ikigai" />
                 </div>
                 <h3 className="widget-title name">
-                  Dot
-                  <span>Creative</span>
+                  IKIGAI
+                  <span>MARKETER</span>
                 </h3>
                 <p className="next">
                   We create experiences that change the way people interact with

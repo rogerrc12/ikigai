@@ -61,7 +61,7 @@ const About = ({ data }) => {
                 <p>
                   Gregory F. Parrino,
                   <span className="link-a">
-                    <a href="#">CEO</a>
+                    <a href="/">CEO</a>
                   </span>
                 </p>
                 <div className="divider-10 d-none d-xl-block" />
@@ -147,7 +147,7 @@ const About = ({ data }) => {
                 <div className="item-media">
                   <img
                     src={data.gallery1.childImageSharp.original.src}
-                    alt="gallery image"
+                    alt="gallery"
                   />
                   <div className="media-links"></div>
                 </div>
@@ -169,7 +169,7 @@ const About = ({ data }) => {
                 <div className="item-media">
                   <img
                     src={data.gallery2.childImageSharp.original.src}
-                    alt="gallery image"
+                    alt="gallery"
                   />
                   <div className="media-links"></div>
                 </div>
@@ -191,7 +191,7 @@ const About = ({ data }) => {
                 <div className="item-media">
                   <img
                     src={data.gallery3.childImageSharp.original.src}
-                    alt="gallery image"
+                    alt="gallery"
                   />
                   <div className="media-links"></div>
                 </div>
@@ -213,7 +213,7 @@ const About = ({ data }) => {
                 <div className="item-media">
                   <img
                     src={data.gallery4.childImageSharp.original.src}
-                    alt="gallery image"
+                    alt="gallery"
                   />
                   <div className="media-links"></div>
                 </div>

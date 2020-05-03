@@ -12,28 +12,13 @@ export const query = graphql`
         content
         title
         slug
-        featuredImage {
-          sourceUrl
-          altText
-        }
-        addons {
-          servicesList {
-            description
-            percentage
-          }
-        }
+        featuredImage { sourceUrl altText }
+        addons { advantages { description } servicesList { description percentage } }
       }
     }
     allServices: wordpress {
       category(id: "Y2F0ZWdvcnk6Mw==") {
-        children {
-          edges {
-            node {
-              slug
-              name
-            }
-          }
-        }
+        children { edges { node { slug name } } }
       }
     }
   }
@@ -46,7 +31,7 @@ const Service = ({ data }) => {
     },
   } = data.allServices
   const { servicioBy } = data.singleService
-  const { servicesList } = data.singleService.servicioBy.addons
+  const { servicesList, advantages } = data.singleService.servicioBy.addons;
 
   return (
     <Layout
@@ -55,45 +40,15 @@ const Service = ({ data }) => {
     >
       <Head title={servicioBy.title} />
 
-      <div className="service-full">
-        <img
-          src={servicioBy.featuredImage.sourceUrl}
-          alt={servicioBy.featuredImage.altText}
-        />
-      </div>
+      <section className="ls s-pt-30 s-pb-50 s-pt-lg-50 s-pb-lg-100 c-mb-50 service-item4">
+        <div class="d-none d-lg-block divider-65"></div>
+        <div className="container">
+          <div className="row">
+            <div class="col-md-4 c-gutter-50 service-widget">
 
-      <section className="ls">
-        <div className="container ">
-          <div className="row c-gutter-60">
-            <div className="col-md-8 single-page">
-              <div className="item-content">
-                <div className="d-none d-lg-block divider-70" />
-                {parser(servicioBy.content)}
+              <h6>Nuestros servicios</h6>
 
-                <div className="progress-service">
-                  {servicesList.map((addon, i) => (
-                    <Fragment key={i}>
-                      <p className="progress-title">{addon.description}</p>
-                      <div className="progress">
-                        <div
-                          className="progress-bar bg-maincolor"
-                          role="progressbar"
-                        >
-                          <span className="float-right">
-                            {addon.percentage}%
-                          </span>
-                        </div>
-                      </div>
-                    </Fragment>
-                  ))}
-                </div>
-                <div className="d-none d-lg-block divider-40" />
-              </div>
-            </div>
-            {/* .col-* */}
-            <div className="col-md-4 hero-bg widget-service">
-              <h6>Other Services</h6>
-              <ul className="list">
+              <ul class="list">
                 {services.map(service => (
                   <li key={service.node.slug}>
                     <Link to={`services/${service.node.slug}`}>
@@ -103,6 +58,42 @@ const Service = ({ data }) => {
                 ))}
               </ul>
             </div>
+            
+            <div className="col-md-8">
+              <img src={servicioBy.featuredImage.sourceUrl} alt={servicioBy.featuredImage.altText} />
+              <div className="icon-box hero-bg single">
+                {parser(servicioBy.content)}
+                <div className="row c-gutter-60 c-mb-20 c-mb-lg-40">
+                  <div className="col-md-12 col-lg-6 left-part">
+                    <div className="progress-service">
+                      <h6>Our Experience</h6>
+                      {servicesList.map((addon, i) => (
+                        <Fragment key={i}>
+                          <p className="progress-title">{addon.description}</p>
+                          <div className="progress">
+                            <div
+                              className="progress-bar bg-maincolor"
+                              role="progressbar"
+                            >
+                              <span className="float-right">
+                                {addon.percentage}%
+                              </span>
+                            </div>
+                          </div>
+                        </Fragment>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="col-md-12 col-lg-6 list-comtent">
+                    <h6>Our Advantages</h6>
+                    <ul className="list1">
+                      {advantages.map((advantage, i) => <li key={i}>{advantage.description}</li>)}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* .col-* */}
           </div>
         </div>
       </section>

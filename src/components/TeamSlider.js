@@ -5,42 +5,17 @@ import Slider from "react-slick"
 import { graphql, useStaticQuery } from "gatsby"
 
 const TeamSlider = () => {
-  const data = useStaticQuery(graphql`
+  const { wordpress: { equipo: { nodes: team } } } = useStaticQuery(graphql`
     {
-      team1: file(relativePath: { eq: "team/team_slide_01.jpg" }) {
-        childImageSharp {
-          original {
-            src
+      wordpress {
+      equipo {
+          nodes {
+            details { photo { altText sourceUrl(size: LARGE) } ocupation fullName }
           }
         }
-        name
-      }
-      team2: file(relativePath: { eq: "team/team_slide_02.jpg" }) {
-        childImageSharp {
-          original {
-            src
-          }
-        }
-        name
-      }
-      team3: file(relativePath: { eq: "team/team_slide_02.jpg" }) {
-        childImageSharp {
-          original {
-            src
-          }
-        }
-        name
-      }
-      team4: file(relativePath: { eq: "team/team_slide_04.jpg" }) {
-        childImageSharp {
-          original {
-            src
-          }
-        }
-        name
       }
     }
-  `)
+  `);
 
   const sliderRef = useRef()
 
@@ -60,9 +35,9 @@ const TeamSlider = () => {
     customPaging: i => (
       <ul>
         <li className="menu_item">
-          {data[`team${i + 1}`].name}
+          {team[i].details.fullName}
           <span className="position" style={{ marginLeft: "10px" }}>
-            Marketer
+            {team[i].details.ocupation}
           </span>
         </li>
       </ul>
@@ -77,18 +52,11 @@ const TeamSlider = () => {
           className="slides"
           ref={s => (sliderRef.current = s)}
         >
-          <div className="ls">
-            <img src={data.team1.childImageSharp.original.src} alt="team 1" />
-          </div>
-          <div className="ls">
-            <img src={data.team2.childImageSharp.original.src} alt="team 2" />
-          </div>
-          <div className="ls">
-            <img src={data.team3.childImageSharp.original.src} alt="team 3" />
-          </div>
-          <div className="ls">
-            <img src={data.team4.childImageSharp.original.src} alt="team 4" />
-          </div>
+          {team.map((user, i) => (
+            <div className="ls" key={i}>
+              <img src={user.details.photo.sourceUrl} alt={user.details.photo.altText} />
+            </div>
+          ))}
         </Slider>
       </div>
     </div>

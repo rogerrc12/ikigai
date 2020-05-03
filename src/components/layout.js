@@ -26,9 +26,9 @@ const Layout = ({ location, children, sectionTitle }) => {
         </div>
       </div>
 
-      <a href="#" id="toTop">
+      <button type="button" id="toTop">
         <span id="toTopHover" style={{ opacity: "0" }}></span>To Top
-      </a>
+      </button>
     </>
   )
 }

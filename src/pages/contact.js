@@ -104,9 +104,9 @@ const Contact = ({ data }) => {
                 <span className="color-main">1-800-123-4567</span>
                 <span className="small">or...</span>
               </h6>
-              <a href="#" className="btn btn-outline-maincolor">
+              <button type="button" className="btn btn-outline-maincolor">
                 Start Chat Now!
-              </a>
+              </button>
             </div>
           </div>
         </div>
