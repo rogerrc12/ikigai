@@ -18,7 +18,7 @@ const Blog = ({ pageContext }) => {
 
       <section className="ls s-py-50 s-pt-lg-50 s-pb-lg-100 blog3">
         <div className="container">
-          <div className="d-none d-lg-block divider-65"></div>
+          <div className="d-none d-lg-block divider-65"/>
 
           <div className="row">
             <div className="col-lg-12 blog_slider">
@@ -42,7 +42,7 @@ const Blog = ({ pageContext }) => {
                       </Link>
                     ) : null}
                     <div className="entry-meta post-icons small-text">
-                      <i className="first fa fa-calendar color-main fs-14"></i>{" "}
+                      <i className="first fa fa-calendar color-main fs-14"/>{" "}
                       <Link to={`/blog/post/${post.slug}`}>
                         <Moment format="DD/MM/YYYY">{post.date}</Moment>
                       </Link>
@@ -79,31 +79,31 @@ const Blog = ({ pageContext }) => {
                 </article>
               ))}
               
-              <nav class="navigation pagination" role="navigation">
-								<h2 class="screen-reader-text">Posts navigation</h2>
-								<div class="nav-links">
+              <nav className="navigation pagination" role="navigation">
+								<h2 className="screen-reader-text">Posts navigation</h2>
+								<div className="nav-links">
 									{!first ?
-                    <Link class="prev page-numbers" to={`/blog/${previousUrl}`}>
-                      <i class="fa fa-chevron-left"></i>
-                      <span class="screen-reader-text">Previous page</span>
+                    <Link className="prev page-numbers" to={`/blog/${previousUrl}`}>
+                      <i className="fa fa-chevron-left"/>
+                      <span className="screen-reader-text">Previous page</span>
                     </Link>
                     : null}
                   {Array.from({ length: pageCount }).map((_, i) => {
                     return i + 1 !== index ?
-                    <Link class="page-numbers" to={`/blog/${i + 1 === 1 ? '' : i + 1}`}>
-                      <span class="meta-nav screen-reader-text">Page </span>
+                    <Link key={i} className="page-numbers" to={`/blog/${i + 1 === 1 ? '' : i + 1}`}>
+                      <span className="meta-nav screen-reader-text">Page </span>
                       {i + 1}
                     </Link>
                     :
-                    <span class="page-numbers current">
-                      <span class="meta-nav screen-reader-text">Page </span>
+                    <span key={i} className="page-numbers current">
+                      <span className="meta-nav screen-reader-text">Page </span>
                       {i + 1}
                     </span>
                   })}
                   {!last ?
-                    <Link class="next page-numbers" to={`/blog/${nextUrl}`}>
-                      <span class="screen-reader-text">Next page</span>
-                      <i class="fa fa-chevron-right"></i>
+                    <Link className="next page-numbers" to={`/blog/${nextUrl}`}>
+                      <span className="screen-reader-text">Next page</span>
+                      <i className="fa fa-chevron-right"/>
                     </Link>
                     : null}
 								</div>

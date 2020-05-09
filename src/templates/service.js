@@ -16,23 +16,16 @@ export const query = graphql`
         addons { advantages { description } servicesList { description percentage } }
       }
     }
-    allServices: wordpress {
-      category(id: "Y2F0ZWdvcnk6Mw==") {
-        children { edges { node { slug name } } }
-      }
-    }
+    allServices: wordpress { servicios { nodes { title slug } } }
   }
 `
 
 const Service = ({ data }) => {
-  const {
-    category: {
-      children: { edges: services },
-    },
-  } = data.allServices
+  const { servicios: { nodes: servicios } } = data.allServices;
   const { servicioBy } = data.singleService
   const { servicesList, advantages } = data.singleService.servicioBy.addons;
 
+  console.log(servicios);
   return (
     <Layout
       location={`/services${servicioBy.slug}`}
@@ -41,18 +34,18 @@ const Service = ({ data }) => {
       <Head title={servicioBy.title} />
 
       <section className="ls s-pt-30 s-pb-50 s-pt-lg-50 s-pb-lg-100 c-mb-50 service-item4">
-        <div class="d-none d-lg-block divider-65"></div>
+        <div className="d-none d-lg-block divider-65"/>
         <div className="container">
           <div className="row">
-            <div class="col-md-4 c-gutter-50 service-widget">
+            <div className="col-md-4 c-gutter-50 service-widget">
 
               <h6>Nuestros servicios</h6>
 
-              <ul class="list">
-                {services.map(service => (
-                  <li key={service.node.slug}>
-                    <Link to={`services/${service.node.slug}`}>
-                      {service.node.name}
+              <ul className="list">
+                {servicios.map(service => (
+                  <li key={service.slug}>
+                    <Link to={`services/${service.slug}`}>
+                      {service.title}
                     </Link>
                   </li>
                 ))}
@@ -66,7 +59,7 @@ const Service = ({ data }) => {
                 <div className="row c-gutter-60 c-mb-20 c-mb-lg-40">
                   <div className="col-md-12 col-lg-6 left-part">
                     <div className="progress-service">
-                      <h6>Our Experience</h6>
+                      <h6>Nuestra Experiencia</h6>
                       {servicesList.map((addon, i) => (
                         <Fragment key={i}>
                           <p className="progress-title">{addon.description}</p>
@@ -75,9 +68,6 @@ const Service = ({ data }) => {
                               className="progress-bar bg-maincolor"
                               role="progressbar"
                             >
-                              <span className="float-right">
-                                {addon.percentage}%
-                              </span>
                             </div>
                           </div>
                         </Fragment>
@@ -85,7 +75,7 @@ const Service = ({ data }) => {
                     </div>
                   </div>
                   <div className="col-md-12 col-lg-6 list-comtent">
-                    <h6>Our Advantages</h6>
+                    <h6>Nuestras Ventajas</h6>
                     <ul className="list1">
                       {advantages.map((advantage, i) => <li key={i}>{advantage.description}</li>)}
                     </ul>

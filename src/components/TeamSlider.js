@@ -35,8 +35,8 @@ const TeamSlider = () => {
     customPaging: i => (
       <ul>
         <li className="menu_item">
-          {team[i].details.fullName}
-          <span className="position" style={{ marginLeft: "10px" }}>
+          <p>{team[i].details.fullName}</p>
+          <span className="position">
             {team[i].details.ocupation}
           </span>
         </li>

@@ -1,12 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import TeamSlider from "../components/TeamSlider"
+import TeamSlider from "../components/TeamSlider";
+import Services from '../components/Services';
+import Steps from '../components/Steps';
 import VerticalLine from "../assets/img/vertical_line.png"
 import VerticalLine2 from "../assets/img/vertical_line2.png"
 import DarkLineShort from "../assets/img/dark_line_short.png"
 import PinkLine from "../assets/img/pink_line_big.png"
-import { graphql, Link } from "gatsby"
+import { graphql, Link } from "gatsby";
 
 export const squareImage = graphql`
   fragment ServiceImage on File {
@@ -20,33 +22,6 @@ export const squareImage = graphql`
 
 export const query = graphql`
   query {
-    service1: file(relativePath: { eq: "service/service_icon_1-1.png" }) {
-      ...ServiceImage
-    }
-    service2: file(relativePath: { eq: "service/service_icon_2-1.png" }) {
-      ...ServiceImage
-    }
-    service3: file(relativePath: { eq: "service/service_icon_3-1.png" }) {
-      ...ServiceImage
-    }
-    service4: file(relativePath: { eq: "service/service_icon_4-1.png" }) {
-      ...ServiceImage
-    }
-    service5: file(relativePath: { eq: "service/service_icon_5-1.png" }) {
-      ...ServiceImage
-    }
-    service6: file(relativePath: { eq: "service/service_icon_6-1.png" }) {
-      ...ServiceImage
-    }
-    step1: file(relativePath: { eq: "step_img_1.jpg" }) {
-      ...ServiceImage
-    }
-    step2: file(relativePath: { eq: "step_img_2.jpg" }) {
-      ...ServiceImage
-    }
-    step3: file(relativePath: { eq: "step_img_3.jpg" }) {
-      ...ServiceImage
-    }
     book1: file(relativePath: { eq: "book-1.png" }) {
       ...ServiceImage
     }
@@ -69,6 +44,8 @@ export const query = graphql`
 `
 
 const IndexPage = ({ data }) => {
+  
+  console.log(data)
   return (
     <Layout location="/">
       <Head title="Agencia onmicanal" />
@@ -95,7 +72,7 @@ const IndexPage = ({ data }) => {
                         data-animation="fadeInDown"
                       >
                         <h2 className="text-uppercase intro_featured_word">
-                          Agencia Creativa
+                          Agencia de Marketing
                         </h2>
                       </div>
                       <div
@@ -111,7 +88,7 @@ const IndexPage = ({ data }) => {
                         data-animation="fadeIn"
                       >
                         <p className="text-uppercase intro_after_featured_word">
-                          Desarrollando tus ideas
+                          Cumpliendo tus propósitos
                         </p>
                       </div>
                       <div
@@ -119,7 +96,7 @@ const IndexPage = ({ data }) => {
                         data-animation="pullDown"
                       >
                         <Link className="btn btn-maincolor" to="/contact">
-                          contáctanos
+                          Comencemos
                         </Link>
                       </div>
                     </div>
@@ -128,17 +105,17 @@ const IndexPage = ({ data }) => {
                       <div className="slide-social-icons float-right">
                         <div className="animate" data-animation="fadeInDown">
                           <a href="https://www.facebook.com">
-                            <i className="fa fa-facebook"></i>
+                            <i className="fa fa-facebook" />
                           </a>
                         </div>
                         <div className="animate" data-animation="fadeInDown">
                           <a href="https://www.linkedin.com/">
-                            <i className="fa fa-linkedin"></i>
+                            <i className="fa fa-linkedin" />
                           </a>
                         </div>
                         <div className="animate" data-animation="fadeInDown">
                           <a href="https://www.instagram.com/">
-                            <i className="fa fa-instagram last"></i>
+                            <i className="fa fa-instagram last" />
                           </a>
                         </div>
                       </div>
@@ -149,7 +126,7 @@ const IndexPage = ({ data }) => {
                 {/* eof .col-* */}
                 <div className="flexslider-bottom d-none d-xl-block">
                   <a href="#about">
-                    <i className="mouse-button animated floating"></i>
+                    <i className="mouse-button animated floating" />
                   </a>
                 </div>
               </div>
@@ -177,15 +154,13 @@ const IndexPage = ({ data }) => {
                   <div className="divider-35" />
                 </div>
                 <h5>
-                  We are the one of the most effective Web Design Companies
+                  Nuestro Ikigai: <br /> “Es hacer que el usuario te encuentre a ti en vez de ir a buscarlo”.
                 </h5>
                 <p>
-                  Getting online is easy. Succeeding online is a different
-                  story. You’ll need more than just a beautiful website to stand
-                  out these days.
-                  <strong>Online marketing solutions.</strong> Conversion-based
-                  web design coupled with a lead generating marketing plan, your
-                  online success is inevitable.
+                  Estar en internet es fácil!, pero tener éxito es otra historia. 
+                  Necesitaras de verdaderos <strong>expertos</strong> que te lleven de la mano. 
+                  Con nuestro profesionales en ventas, marketing y programación 
+                  tendrás estrategias claras y soluciones de inbound marketing adaptadas, haciendo que tu éxito sea inevitable.
                 </p>
                 <div className="divider-30" />
                 <div className="img-wrap text-center">
@@ -194,7 +169,7 @@ const IndexPage = ({ data }) => {
                 <div>
                   <div className="divider-40" />
                   <button type="button" className="btn btn-outline-maincolor">
-                    Get Started
+                    Comencemos
                   </button>
                   <div className="divider-40" />
                 </div>
@@ -218,125 +193,7 @@ const IndexPage = ({ data }) => {
         <div className="container">
           <div className="row c-mb-50 c-mb-md-60">
             <div className="d-none d-lg-block divider-20" />
-            <div className="col-12 col-md-6 col-lg-4">
-              <div className="vertical-item text-center">
-                <div className="item-media">
-                  <img
-                    src={data.service1.childImageSharp.original.src}
-                    alt="service 1"
-                  />
-                </div>
-                <div className="item-content">
-                  <h6>
-                    <a href="service-single1.html">Marketing</a>
-                  </h6>
-                  <p>
-                    We use strategic marketing tactics that have been proven to
-                    work.
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/* .col-* */}
-            <div className="col-12 col-md-6 col-lg-4">
-              <div className="vertical-item text-center">
-                <div className="item-media">
-                  <img
-                    src={data.service2.childImageSharp.original.src}
-                    alt="service 2"
-                  />
-                </div>
-                <div className="item-content">
-                  <h6>
-                    <a href="service-single1.html">Development</a>
-                  </h6>
-                  <p>
-                    Custom programming for most complex functions you can think.
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/* .col-* */}
-            <div className="col-12 col-md-6 col-lg-4">
-              <div className="vertical-item text-center">
-                <div className="item-media">
-                  <img
-                    src={data.service3.childImageSharp.original.src}
-                    alt="service 3"
-                  />
-                </div>
-                <div className="item-content">
-                  <h6>
-                    <a href="service-single1.html">Web Design</a>
-                  </h6>
-                  <p>
-                    Pork chop pork belly hamburger prosciutto, fatback andouille
-                    flank.
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/* .col-* */}
-            <div className="col-12 col-md-6 col-lg-4">
-              <div className="vertical-item text-center">
-                <div className="item-media">
-                  <img
-                    src={data.service4.childImageSharp.original.src}
-                    alt="service 4"
-                  />
-                </div>
-                <div className="item-content">
-                  <h6>
-                    <a href="service-single1.html">SEO Optimization</a>
-                  </h6>
-                  <p>
-                    Optimizing our web designs to rank on the first page of
-                    google is our specialty.
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/* .col-* */}
-            <div className="col-12 col-md-6 col-lg-4">
-              <div className="vertical-item text-center">
-                <div className="item-media">
-                  <img
-                    src={data.service5.childImageSharp.original.src}
-                    alt="service 5"
-                  />
-                </div>
-                <div className="item-content">
-                  <h6>
-                    <a href="service-single1.html">Ecommerce</a>
-                  </h6>
-                  <p>
-                    We build your online store using a flexible, modular
-                    platform that allows
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/* .col-* */}
-            <div className="col-12 col-md-6 col-lg-4">
-              <div className="vertical-item text-center">
-                <div className="item-media">
-                  <img
-                    src={data.service6.childImageSharp.original.src}
-                    alt="service 6"
-                  />
-                </div>
-                <div className="item-content">
-                  <h6>
-                    <a href="service-single1.html">Branding</a>
-                  </h6>
-                  <p>
-                    A solid brand strategy, logo and guidelines help you to get
-                    You recognized.
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/* .col-* */}
+            <Services />
           </div>
           <div className="pink-line text-center">
             <img src={PinkLine} alt="pink line" />
@@ -351,117 +208,15 @@ const IndexPage = ({ data }) => {
       >
         <div className="container">
           <div className="divider-65" />
-          <div className="row align-items-center c-mb-20 c-mb-lg-60">
-            <div className="col-12 col-lg-4">
-              <div className="step-left-part text-right">
-                <h2 className="step-title">
-                  <span className="color-main">01</span>Strategy
-                </h2>
-              </div>
-            </div>
-            <div className="col-12 col-lg-4">
-              <div className="step-center-part text-center">
-                <img
-                  src={data.step1.childImageSharp.original.src}
-                  alt="step 1"
-                />
-              </div>
-            </div>
-            <div className="col-12 col-lg-4">
-              <div className="step-right-part">
-                <p className="step-text">
-                  We define your competition and target audience. Discover what
-                  is working in your online industry, then design your website
-                  accordingly.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row align-items-center right c-mb-20 c-mb-lg-60">
-            <div className="col-12 col-lg-4  order-lg-3">
-              <div className="step-left-part">
-                <h2 className="step-title color1">
-                  <span className="color-main2">02</span>Design
-                </h2>
-              </div>
-            </div>
-            <div className="col-12 col-lg-4 order-lg-2">
-              <div className="step-center-part text-center">
-                <img
-                  src={data.step2.childImageSharp.original.src}
-                  alt="step 2"
-                />
-              </div>
-            </div>
-            <div className="col-12 col-lg-4 order-lg-1 text-right">
-              <div className="step-right-part ">
-                <p className="step-text">
-                  Color scheme, layout, sitemap, and style. We will bring your
-                  brand to life with a one of a kind masterpiece, built just for
-                  you.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row align-items-center c-mb-20 c-mb-lg-60">
-            <div className="col-12 col-lg-4">
-              <div className="step-left-part text-right part3">
-                <h2 className="step-title">
-                  <span className="color-main3">03</span>Develop
-                </h2>
-              </div>
-            </div>
-            <div className="col-12 col-lg-4">
-              <div className="step-center-part text-center">
-                <img
-                  src={data.step3.childImageSharp.original.src}
-                  alt="step 3"
-                />
-              </div>
-            </div>
-            <div className="col-12 col-lg-4">
-              <div className="step-right-part">
-                <p className="step-text">
-                  We turn your ideas into a reality. &amp;our website is placed
-                  on a "development server" where you get to watch the whole
-                  process, live.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row align-items-center right c-mb-20 c-mb-lg-60">
-            <div className="col-12 col-lg-4  order-lg-3">
-              <div className="step-left-part part4">
-                <h2 className="step-title color1">
-                  <span className="color-main4">04</span>Support
-                </h2>
-              </div>
-            </div>
-            <div className="col-12 col-lg-4 order-lg-2">
-              <div className="step-center-part text-center last">
-                <img
-                  src={data.step2.childImageSharp.original.src}
-                  alt="step 2"
-                />
-              </div>
-            </div>
-            <div className="col-12 col-lg-4 order-lg-1 text-right">
-              <div className="step-right-part ">
-                <p className="step-text">
-                  This is where you go live, to the world. Design, marketing,
-                  and maintenance; we'll be at your side for the life of your
-                  site.
-                </p>
-              </div>
-            </div>
-          </div>
+          <Steps />
+          
           <div className="divider-10 d-block d-sm-none" />
           <div className="img-wrap text-center">
             <img src={VerticalLine2} alt="vertical line" />
           </div>
           <div className=" white-button text-center">
             <Link className="btn white-btn" to="/services">
-              Get Started
+              Comencemos
             </Link>
           </div>
           <div className="divider-30 d-none d-xl-block" />
@@ -474,7 +229,40 @@ const IndexPage = ({ data }) => {
           <TeamSlider />
         </div>
       </section>
-
+      
+      {/* Let's get started */}
+      <section className="s-pt-130 s-pt-md-50 ls text-section">
+        <div className="divider-30" />
+        <div className="container">
+          <div className="row">
+            <div className="text-center col-md-12 justify-content-center text-block">
+              <img src={VerticalLine} alt="vertical Line" />
+              <div className="divider-35" />
+              <div className="content">
+                <h1>
+                  Empecemos
+                  <br /> a cumplir tu propósito
+                </h1>
+                <p>Te llevaremos de la mano en un recorrido exitoso</p>
+                <div className="divider-30" />
+              </div>
+              <img src={VerticalLine} alt="vertical Line" />
+              <div>
+                <div className="divider-40" />
+                <a href="/" className="btn btn-outline-maincolor">
+                  Let’s Talk!
+                </a>
+                <div className="divider-30" />
+              </div>
+              <div className="img-wrap overflow-visible">
+                <img src={VerticalLine} alt="vertical Line" />
+                <div className="divider-5 d-none d-xl-block" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
       {/* Blog posts home */}
       <section className="ls ms book-item s-pb-30 s-pb-lg-25">
         <div className="corner corner-light" />
@@ -487,14 +275,13 @@ const IndexPage = ({ data }) => {
                   <div className="divider-35" />
                 </div>
                 <h5>
-                  B2B Marketing &amp; Web Design
-                  <br /> Resources
+                  Cada fuente de actualización sobre el mundo digital es importante.
                 </h5>
                 <p>
-                  B2B client acquisition is not the same as B2C– a B2B website,
-                  brand messaging and content marketing play a much different
-                  role. We understand the B2B marketing and sales funnel and the
-                  tactics that generate and nurture ideal client leads.
+                  Las personas viven e interactúan constantemente con la tecnología a diario,
+                  saber sus usos y avances presenta una serie de beneficios que permiten a las organizaciones,
+                  de todo tamaño, crecer, consolidarse y estar en donde antes era imposible llegar. <br />
+                  Descubre con nosotros la nueva era de la comunicación.
                 </p>
                 <div className="divider-30" />
                 <div className="img-wrap text-center">
@@ -568,40 +355,7 @@ const IndexPage = ({ data }) => {
           <div className="divider-10" />
         </div>
       </section>
-
-      {/* Let's get started */}
-      <section className="s-pt-130 s-pt-md-50 ls text-section">
-        <div className="divider-30" />
-        <div className="container">
-          <div className="row">
-            <div className="text-center col-md-12 justify-content-center text-block">
-              <img src={VerticalLine} alt="vertical Line" />
-              <div className="divider-35" />
-              <div className="content">
-                <h1>
-                  Lets Get Started
-                  <br /> Your Project
-                </h1>
-                <p>We’ll help to achieve your goals and to grow business</p>
-                <div className="divider-30" />
-              </div>
-              <img src={VerticalLine} alt="vertical Line" />
-              <div>
-                <div className="divider-40" />
-                <a href="/" className="btn btn-outline-maincolor">
-                  Let’s Talk!
-                </a>
-                <div className="divider-30" />
-              </div>
-              <div className="img-wrap overflow-visible">
-                <img src={VerticalLine} alt="vertical Line" />
-                <div className="divider-5 d-none d-xl-block" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+  
       {/* Mini contact */}
       <section
         className="s-pt-50 s-pb-100 s-pt-lg-30 s-pb-lg-75 ls ms teaser-contact-icon main-icon s-parallax"
@@ -665,6 +419,7 @@ const IndexPage = ({ data }) => {
         </div>
         <div className="divider-10" />
       </section>
+
     </Layout>
   )
 }

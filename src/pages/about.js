@@ -1,7 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import TeamSlider from "../components/TeamSlider"
+import TeamSlider from "../components/TeamSlider";
+import PortfolioList from '../components/PortfolioList';
 import Map from "../components/GoogleMaps"
 import { graphql } from "gatsby"
 
@@ -26,18 +27,6 @@ export const query = graphql`
     icon3: file(relativePath: { eq: "icon3_about.png" }) {
       ...OriginalImage
     }
-    gallery1: file(relativePath: { eq: "gallery/gallery-1.jpg" }) {
-      ...OriginalImage
-    }
-    gallery2: file(relativePath: { eq: "gallery/gallery-2.jpg" }) {
-      ...OriginalImage
-    }
-    gallery3: file(relativePath: { eq: "gallery/gallery-3.jpg" }) {
-      ...OriginalImage
-    }
-    gallery4: file(relativePath: { eq: "gallery/gallery-4.jpg" }) {
-      ...OriginalImage
-    }
   }
 `
 
@@ -54,14 +43,13 @@ const About = ({ data }) => {
             <div className="col-md-8 offset-md-2">
               <div className="main-content text-center">
                 <h5>
-                  "We love what we do and we love helping others succeed at what
-                  they love to do."
+                  “Un proyecto nuevo es un nuevo amor, una nueva oportunidad para entregarlo todo.”
                 </h5>
                 <i className="rt-icon2-user" />
                 <p>
-                  Gregory F. Parrino,
+                  Lissette Linares,
                   <span className="link-a">
-                    <a href="/">CEO</a>
+                    <a href="/"> CEO</a>
                   </span>
                 </p>
                 <div className="divider-10 d-none d-xl-block" />
@@ -85,12 +73,11 @@ const About = ({ data }) => {
                   />
                 </div>
               </div>
-              <h6>Who We Are</h6>
+              <h6>Quiénes somos</h6>
               <div className="icon-content">
                 <p>
-                  We are a team of San Diego web design and development
-                  professionals who love partnering with good people and
-                  businesses to help them achieve online success.
+                  En Ikigaimarketer encontrarás un grupo de expertos en ventas, 
+                  marketing y programación entrenado para hacerte crecer en el mundo digital.
                 </p>
               </div>
             </div>
@@ -105,12 +92,9 @@ const About = ({ data }) => {
                 </div>
               </div>
               <div className="icon-content">
-                <h6>What We Do</h6>
+                <h6>Que hacemos</h6>
                 <p>
-                  We’re focused on honing our crafts and bringing everything we
-                  have to the table for our clients. We create custom,
-                  functional websites focused on converting your users into
-                  customers.
+                  Crecemos y mejoramos tu reconocimiento online a tráves del uso de herramientas de Inbound Marketing. Cuidamos tu marca, por lo que te asesoramos sobre los canales que debes usar para llegar a donde quieres.
                 </p>
               </div>
             </div>
@@ -124,12 +108,9 @@ const About = ({ data }) => {
                 </div>
               </div>
               <div className="icon-content">
-                <h6>Why We Do It</h6>
+                <h6>Porque lo hacemos</h6>
                 <p>
-                  Each of us loves what we do and we feel that spirit helps
-                  translate into the quality of our work. Working with clients
-                  who love their work combines into a fun, wonderful partnership
-                  for everyone involved.
+                  Cada proyecto representa una nueva oportunidad de dar lo mejor de nosotros y de cumplir nuestro Ikigai: llevar al mundo una marca con próposito y sentido.
                 </p>
               </div>
             </div>
@@ -137,98 +118,12 @@ const About = ({ data }) => {
         </div>
       </section>
 
-      {/* Services gallery */}
+      {/* Portfolio gallery */}
       <section className="s-pt-20 s-pt-lg-30 gallery-carousel main-gallery container-px-0">
         <div className="container-fluid">
           <div className="divider-5 d-none d-xl-block" />
           <div className="row">
-            <div className="col-md-3">
-              <div className="vertical-item item-gallery content-absolute text-center ds web-design">
-                <div className="item-media">
-                  <img
-                    src={data.gallery1.childImageSharp.original.src}
-                    alt="gallery"
-                  />
-                  <div className="media-links"></div>
-                </div>
-                <div className="item-content">
-                  <h6>
-                    <a className="small-text" href="gallery-regular.html">
-                      web-design
-                    </a>
-                  </h6>
-                  <h6>
-                    <a href="gallery-regular.html">Clothes Badge Design</a>
-                  </h6>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-3">
-              <div className="vertical-item item-gallery content-absolute text-center ds logo-design">
-                <div className="item-media">
-                  <img
-                    src={data.gallery2.childImageSharp.original.src}
-                    alt="gallery"
-                  />
-                  <div className="media-links"></div>
-                </div>
-                <div className="item-content">
-                  <h6>
-                    <a className="small-text" href="gallery-regular.html">
-                      logo-design
-                    </a>
-                  </h6>
-                  <h6>
-                    <a href="gallery-regular.html">Clothes Badge Design</a>
-                  </h6>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-3">
-              <div className="vertical-item item-gallery content-absolute text-center ds advertisement">
-                <div className="item-media">
-                  <img
-                    src={data.gallery3.childImageSharp.original.src}
-                    alt="gallery"
-                  />
-                  <div className="media-links"></div>
-                </div>
-                <div className="item-content">
-                  <h6>
-                    <a className="small-text" href="gallery-regular.html">
-                      advertisement
-                    </a>
-                  </h6>
-                  <h6>
-                    <a href="gallery-regular.html">Clothes Badge Design</a>
-                  </h6>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-3">
-              <div className="vertical-item item-gallery content-absolute text-center ds branding">
-                <div className="item-media">
-                  <img
-                    src={data.gallery4.childImageSharp.original.src}
-                    alt="gallery"
-                  />
-                  <div className="media-links"></div>
-                </div>
-                <div className="item-content">
-                  <h6>
-                    <a className="small-text" href="gallery-regular.html">
-                      branding
-                    </a>
-                  </h6>
-                  <h6>
-                    <a href="gallery-regular.html">Clothes Badge Design</a>
-                  </h6>
-                </div>
-              </div>
-            </div>
+            <PortfolioList />
           </div>
         </div>
       </section>

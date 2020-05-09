@@ -24,13 +24,9 @@ export const query = graphql`
 `
 
 const Services = ({
-  data: {
-    wordpress: {
-      servicios: { nodes: services },
-    },
+  data: { wordpress: { servicios: { nodes: services }, },
   },
 }) => {
-  console.log(services)
 
   return (
     <Layout location="/services" sectionTitle="Nuestros Servicios">

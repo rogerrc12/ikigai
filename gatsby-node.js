@@ -39,13 +39,9 @@ async function createServicePages ({ graphql, actions }) {
   const serviceTemplate = path.join(__dirname, "src", "templates", "service.js");
 
   // QUERYING SERVICES CATEGORIES 
-  const { data: { wordpress: { category: { children: { edges: services }, }, }, }, } = await graphql(`
+  const { data: { wordpress: { servicios: { nodes:  services }, }, }, } = await graphql(`
     {
-      wordpress {
-        category(id: "Y2F0ZWdvcnk6Mw==") {
-          children { edges { node { slug } } }
-        }
-      }
+      wordpress { servicios { nodes { slug } } }
     }
   `)
 
@@ -53,8 +49,8 @@ async function createServicePages ({ graphql, actions }) {
   services.map(service =>
     createPage({
       component: serviceTemplate,
-      path: `/services/${service.node.slug}`,
-      context: { slug: service.node.slug },
+      path: `/services/${service.slug}`,
+      context: { slug: service.slug },
     })
   )
 }

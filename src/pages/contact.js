@@ -45,7 +45,7 @@ const Contact = ({ data }) => {
                   />
                 </div>
               </div>
-              <h6>Call Us</h6>
+              <h6>Llámanos</h6>
               <p className="teaser-content">
                 <strong>New Accounts:</strong> 1-800-123-4567
                 <br />
@@ -61,7 +61,7 @@ const Contact = ({ data }) => {
                   />
                 </div>
               </div>
-              <h6>Write Us</h6>
+              <h6>Escríbenos</h6>
               <p className="teaser-content">
                 example@example.com
                 <br /> example@example.com
@@ -76,7 +76,7 @@ const Contact = ({ data }) => {
                   />
                 </div>
               </div>
-              <h6>Visit Us</h6>
+              <h6>Visítanos</h6>
               <p className="teaser-content">
                 2231 Sycamore Lake Road
                 <br /> Green Bay, WI 54304
@@ -91,21 +91,21 @@ const Contact = ({ data }) => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-12 col-lg-5">
-              <h1>Live Support</h1>
+              <h1>Contáctanos</h1>
               <p>
-                Nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                erat, sed diam voluptua. At vero eos et accusam et usto duo
-                dolores eta rebum. Stet clita kasd gubergren, no sea takimata
-                sanctus est lorem ipsum dolor sit amet lorem ipsum dolor sit
-                amet, consetetur.
+                Obten ayuda para elegir cualquiera de nuestros servicios. 
+                Llegamos a toda <strong>America Latina, USA y Europa</strong>.
               </p>
               <h6>
-                Call Us Now:
-                <span className="color-main">1-800-123-4567</span>
-                <span className="small">or...</span>
+                Atención inmediata en nuestros canales:
               </h6>
+              <a href="https://wa.me/51930463531?text=Estoy%20interesado%20en%20sus%20servicios"
+                 target="_blank" rel="noopener noreferrer"
+                className="btn btn-outline-maincolor3" style={{marginRight: '15px'}}>
+                Whatsapp
+              </a>
               <button type="button" className="btn btn-outline-maincolor">
-                Start Chat Now!
+                Chat online
               </button>
             </div>
           </div>

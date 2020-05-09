@@ -68,7 +68,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    ></Helmet>
+    >
+      <script src="https://apps.elfsight.com/p/platform.js" defer/>
+    </Helmet>
   )
 }
 

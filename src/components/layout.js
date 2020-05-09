@@ -25,10 +25,8 @@ const Layout = ({ location, children, sectionTitle }) => {
           {location !== "/" ? <Footer /> : <IndexFooter />}
         </div>
       </div>
-
-      <button type="button" id="toTop">
-        <span id="toTopHover" style={{ opacity: "0" }}></span>To Top
-      </button>
+      
+      {location !== '/contact' ? <div className="elfsight-app-8307196d-71bd-4c5d-947d-d69a87fdce9c"/> : null}
     </>
   )
 }
