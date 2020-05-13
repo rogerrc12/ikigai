@@ -5,36 +5,28 @@ import TeamSlider from "../components/TeamSlider";
 import Services from '../components/Services';
 import Steps from '../components/Steps';
 import MiniContact from '../components/MiniContact';
+import parser from 'html-react-parser';
 import VerticalLine from "../assets/img/vertical_line.png"
 import VerticalLine2 from "../assets/img/vertical_line2.png"
 import PinkLine from "../assets/img/pink_line_big.png"
 import { graphql, Link } from "gatsby";
-
-export const squareImage = graphql`
-  fragment ServiceImage on File {
-    childImageSharp {
-      original {
-        src
-      }
-    }
-  }
-`
+import Moment from "react-moment"
 
 export const query = graphql`
-  query {
-    book1: file(relativePath: { eq: "book-1.png" }) {
-      ...ServiceImage
-    }
-    book2: file(relativePath: { eq: "book-2.png" }) {
-      ...ServiceImage
-    }
-    book3: file(relativePath: { eq: "book-3.png" }) {
-      ...ServiceImage
-    }
+  {
+      wordpress {
+        posts(first: 3) {
+          nodes { title excerpt date slug
+            featuredImage { sourceUrl(size: MEDIUM_LARGE) altText }
+            author { name avatar { url } }
+          }
+        }
+      }
   }
-`
+`;
 
 const IndexPage = ({ data }) => {
+  const { wordpress: { posts: { nodes: posts } } } = data;
   
   return (
     <Layout location="/">
@@ -280,69 +272,60 @@ const IndexPage = ({ data }) => {
               </div>
             </div>
             <div className="divider-40" />
-            <div className="row c-gutter-30 c-mb-30 c-mb-lg-0 text-center book">
-              <div className="col-12 col-lg-4">
-                <div className="stage book-1 ls">
-                  <img src={data.book1.childImageSharp.original.src} alt="#" />
-                  <div className="info">
-                    <header>
-                      <h6>
-                        <a href="/">
-                          Annual Report
-                          <br />
-                          2017-2018
-                        </a>
-                      </h6>
-                    </header>
-                    <p>
-                      At vero eos et accusam et justo duo dolores et ea rebum.
-                      Stet clita kasd gubergren.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 col-lg-4">
-                <div className="stage book-2 ds">
-                  <img src={data.book2.childImageSharp.original.src} alt="#" />
-                  <div className="info">
-                    <header>
-                      <h6>
-                        <a href="/">Tools of Trading: Modern Marketing</a>
-                      </h6>
-                    </header>
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam numy eirmod.
-                    </p>
-                    <p className="small-text link-a">
-                      <a href="/">Buy It Now!</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 col-lg-4">
-                <div className="stage book-3 ls">
-                  <img src={data.book3.childImageSharp.original.src} alt="#" />
-                  <div className="info">
-                    <header>
-                      <h6>
-                        <a href="/">Business Magazine: Design</a>
-                      </h6>
-                    </header>
-                    <p>
-                      Et accusam et justo duo dolores et ea rebum. Stet clita
-                      kasd gubergren.
-                    </p>
-                    <p className="small-text link-a">
-                      <a href="/">Buy It Now!</a>
-                    </p>
-                  </div>
+
+            <div className="row">
+              <div className="col-lg-12 blog-featured-posts">
+                <div className="row justify-content-center">
+                  {posts.map(post => (
+                    <div className="col-xl-4 col-md-6" key={post.date}>
+                      <article
+                        className="vertical-item text-center content-padding padding-small ls ms post type-post status-publish format-standard has-post-thumbnail blog-featured-posts">
+                        <div className="item-media post-thumbnail">
+                          <Link to={'/blog/post/' + post.slug}>
+                            <img src={post.featuredImage.sourceUrl} alt={post.featuredImage.altText} />
+                          </Link>
+                        </div>
+                        {/* post-thumbnail */}
+                        <div className="item-content">
+                          <header className="entry-header">
+                            <div className="entry-meta">
+                              <span className="screen-reader-text">Creado en</span>
+                              <Link to={'/blog/post/' + post.slug}>
+                                <time className="entry-date published updated" dateTime={post.date}>
+                                  <Moment format="DD-MM-YYYY">{post.date}</Moment>
+                                </time>
+                              </Link>
+                            </div>
+                            {/* entry-meta */}
+                            <h6 className="entry-title">
+                              <Link to={'/blog/post/' + post.slug}>
+                                {post.title}
+                              </Link>
+                            </h6>
+                          </header>
+                          {/* entry-header */}
+
+                          <div className="entry-content">
+                            {parser(post.excerpt.substring(0 , 100) + '...')}
+                          </div>
+                          {/* entry-content */}
+                          <div className="post-author small-text">
+                            <img src={post.author.avatar.url} alt={post.author.name} />
+                            <p>{post.author.name}</p>
+                          </div>
+                        </div>
+                        {/* item-content */}
+                      </article>
+                      {/* #post-## */}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-            <div className="divider-30" />
           </div>
-          <div className="divider-10" />
+          <div className="text-center col-md-12 justify-content-center text-block">
+            <img src={VerticalLine} alt="vertical Line" />
+          </div>
         </div>
       </section>
       

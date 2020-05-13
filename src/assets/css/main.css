@@ -6648,12 +6648,12 @@ body.boxed {
 }
 
 .vertical-item.content-absolute .item-content h6 a:hover {
-	color: var(--light-magenta-ikigai);
+	color: var(--dark-magenta-ikigai);
 	opacity: 1;
 }
 
 .vertical-item.content-absolute .item-content h6 a.small-text {
-	color: var(--light-magenta-ikigai);
+	color: var(--dark-magenta-ikigai);
 }
 
 .vertical-item.content-absolute .item-content h6 a.small-text:hover {
@@ -6933,8 +6933,8 @@ body.boxed {
 }
 
 .btn-maincolor {
-	background-color: var(--light-magenta-ikigai);
-	border: 4px solid var(--light-magenta-ikigai);
+	background-color: var(--dark-magenta-ikigai);
+	border: 4px solid var(--dark-magenta-ikigai);
 }
 
 .btn-maincolor2 {
@@ -7330,7 +7330,7 @@ body.boxed {
 }
 
 .ds .color-main {
-	color: var(--light-magenta-ikigai);
+	color: var(--dark-magenta-ikigai);
 }
 
 .ds .color-main2 {
@@ -9539,7 +9539,7 @@ filters
 }
 
 .ant-tabs-tab-active .portfolio-tab {
-	color: #ff497c;
+	color: var(--dark-magenta-ikigai);
 }
 
 .ant-tabs-ink-bar {
@@ -15951,6 +15951,11 @@ h4.comments-title {
 	margin-top: 11px;
 }
 
+.post-author.small-text img {
+	border-radius: 50%;
+	max-width: 3rem;
+}
+
 .blog-featured-posts .format-link {
 	margin-top: -110px;
 }
@@ -19534,7 +19539,7 @@ h4.margin {
 }
 
 .page_footer.bordered-footer .blog-footer a {
-	color: var(--light-magenta-ikigai);
+	color: var(--dark-magenta-ikigai);
 }
 
 .page_footer.bordered-footer .blog-footer a:hover {

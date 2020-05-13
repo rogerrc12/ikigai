@@ -53,8 +53,7 @@ function MiniContact() {
             </div>
             <h6>Escríbenos</h6>
             <p>
-              example@example.com
-              <br /> example@example.com
+              info@ikigaimarketer.com
             </p>
           </div>
           <div className="col-lg-4 text-center">
@@ -68,8 +67,8 @@ function MiniContact() {
             </div>
             <h6>Visítanos</h6>
             <p>
-              2231 Sycamore Lake Road
-              <br /> Green Bay, WI 54304
+              Av. del ejercito 749, Miraflores
+              <br /> Lima, Perú
             </p>
           </div>
         </div>

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ikigai-gatsby.iml" filepath="$PROJECT_DIR$/.idea/ikigai-gatsby.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pagoInsibs-pwa/.idea/pagoInsibs-pwa.iml" filepath="$PROJECT_DIR$/../pagoInsibs-pwa/.idea/pagoInsibs-pwa.iml" />
     </modules>
   </component>
 </project>
