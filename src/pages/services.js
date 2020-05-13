@@ -6,7 +6,7 @@ import { graphql, Link } from "gatsby"
 export const query = graphql`
   {
     wordpress {
-      servicios {
+      servicios (where: {orderby: {field: DATE, order: ASC}}) {
         nodes {
           excerpt
           title(format: RENDERED)

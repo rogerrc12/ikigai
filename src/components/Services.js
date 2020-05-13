@@ -6,7 +6,7 @@ function Services() {
   const { wordpress: { servicios: {nodes: servicios} } } = useStaticQuery(graphql`
       {
           wordpress {
-              servicios {
+              servicios (where: {orderby: {field: DATE, order: ASC}}) {
                   nodes {
                       addons {
                           icon {
