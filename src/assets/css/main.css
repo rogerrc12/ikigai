@@ -3709,10 +3709,6 @@ py-* - same value for top and for bottom padding
 	padding-top: 100px;
 }
 
-.s-pt-130 > [class*='container'] {
-	padding-top: 130px;
-}
-
 .s-pb-0 > [class*='container'] {
 	padding-bottom: 0;
 }
@@ -11404,7 +11400,7 @@ a img.aligncenter {
 }
 
 .toggle_menu.mobile-active {
-	background-color: #ff497c;
+	background-color: #A62557;
 	border: none;
 	left: auto;
 	margin: 0;
@@ -11488,7 +11484,7 @@ a img.aligncenter {
 
 	.sf-menu {
 		background-color: #fff;
-		border-top: 61px solid #ff497c;
+		border-top: 61px solid var(--dark-magenta-ikigai);
 		bottom: 0;
 		display: block;
 		font-size: 12px;
@@ -12064,7 +12060,7 @@ a.logo {
 
 a.logo img {
 	display: inline-block;
-	max-width: 10rem;
+	max-width: 10.5rem;
 }
 
 a.logo .logo-text {
@@ -13277,6 +13273,7 @@ body.active-side-header.slide-right .page_header_side {
 @media (max-width: 991px) {
 	.page_slider.static .intro_featured_word {
 		margin-top: 0;
+		font-size: 3rem;
 	}
 }
 
@@ -17785,7 +17782,8 @@ a.btn {
 }
 
 .support-section {
-	background-image: url("../img/bg_3.jpg");
+	background-image: url("../images/contact.jpg");
+	padding-bottom: 4rem;
 }
 
 .support-section h1 {
@@ -19590,7 +19588,7 @@ h4.margin {
 
 .page_footer.bordered-footer .icon-inline > * {
 	margin-right: 6px;
-	margin-top: -6px;
+	margin-top: 0;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -19606,6 +19604,31 @@ h4.margin {
 
 .page_footer.bordered-footer.layout-2 {
 	border-radius: 0;
+}
+
+.social_icons {
+	display: flex;
+	position: fixed;
+	background-color: #A62557;
+	padding: .5rem;
+	bottom: 15%;
+	left: 0;
+	flex-flow: column;
+	align-items: center;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	z-index: 999;
+}
+
+.social_icons a {
+	color: #fff;
+	font-size: 1.4rem;
+	transition: 250ms ease-out;
+}
+
+.social_icons a:hover {
+	color: #fff;
+	opacity: .8;
 }
 
 .light-copy p {

@@ -9,20 +9,20 @@ const Tab = ({ name }) => <span className="portfolio-tab">{name}</span>
 const PortfolioGallery = () => {
   const data = useStaticQuery(graphql`
     {
-      portfolio1: file(relativePath: { eq: "gallery/01.jpg" }) {
-        childImageSharp {
-          original {
-            src
-          }
-        }
+      web1: file(relativePath: { eq: "gallery/web01.jpg" }) {
+        childImageSharp { original { src } }
       }
 
-      portfolio2: file(relativePath: { eq: "gallery/02.jpg" }) {
-        childImageSharp {
-          original {
-            src
-          }
-        }
+      web2: file(relativePath: { eq: "gallery/web02.jpg" }) {
+        childImageSharp { original { src } }
+      }
+        
+      media1: file(relativePath: { eq: "gallery/media01.png" }) {
+          childImageSharp { original { src } }
+      }
+        
+      media2: file(relativePath: { eq: "gallery/media02.jpg" }) {
+          childImageSharp { original { src } }
       }
     }
   `)
@@ -35,39 +35,39 @@ const PortfolioGallery = () => {
             <div className="vertical-item item-gallery content-absolute gallery text-center ls">
               <div className="item-media">
                 <img
-                  src={data.portfolio1.childImageSharp.original.src}
+                  src={data.web1.childImageSharp.original.src}
                   alt="Portfolio 1"
                 />
-                <div className="media-links"></div>
+                <div className="media-links"/>
               </div>
               <div className="item-content">
                 <h6>
-                  <a className="tags small-text" href="/gallery-item.html">
-                    Photo
+                  <a className="tags small-text" href="https://pagoinsibs.com" target="_blank" rel="noopener noreferrer">
+                    Pago INSIBS
                   </a>
                   <br />
-                  <a href="/gallery-item.html">Lorem ipsum dolor sit</a>
+                  <a href="https://pagoinsibs.com" target="_blank" rel="noopener noreferrer">Desarrollo de plataforma web de cobranza con administración</a>
                 </h6>
               </div>
             </div>
           </div>
 
-          <div class="col-xl-6 col-sm-6 advertisement branding">
-            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-              <div class="item-media">
+          <div className="col-xl-6 col-sm-6 advertisement branding">
+            <div className="vertical-item item-gallery content-absolute gallery text-center ls">
+              <div className="item-media">
                 <img
-                  src={data.portfolio2.childImageSharp.original.src}
+                  src={data.web2.childImageSharp.original.src}
                   alt="Portfolio 2"
                 />
-                <div class="media-links"></div>
+                <div className="media-links"/>
               </div>
-              <div class="item-content">
+              <div className="item-content">
                 <h6>
-                  <a class="tags small-text" href="/gallery-item.html">
-                    Photo
+                  <a className="tags small-text" href="https://megaplomerias.cl" target="_blank" rel="noopener noreferrer">
+                    Megaplomerias
                   </a>
                   <br />
-                  <a href="/gallery-item.html">Amet consetetur sadip</a>
+                  <a href="https://megaplomerias.cl" target="_blank" rel="noopener noreferrer">Creación de sitio web profesional con interacción para citas.</a>
                 </h6>
               </div>
             </div>
@@ -79,10 +79,10 @@ const PortfolioGallery = () => {
           <div className="col-xl-6 col-sm-6 web-design design">
             <div className="vertical-item item-gallery content-absolute gallery text-center ls">
               <div className="item-media">
-                <img
-                  src={data.portfolio1.childImageSharp.original.src}
-                  alt="Portfolio 1"
-                />
+                {/*<img*/}
+                {/*  src={data.portfolio1.childImageSharp.original.src}*/}
+                {/*  alt="Portfolio 1"*/}
+                {/*/>*/}
                 <div className="media-links"></div>
               </div>
               <div className="item-content">
@@ -97,18 +97,18 @@ const PortfolioGallery = () => {
             </div>
           </div>
 
-          <div class="col-xl-6 col-sm-6 advertisement branding">
-            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-              <div class="item-media">
-                <img
-                  src={data.portfolio2.childImageSharp.original.src}
-                  alt="Portfolio 2"
-                />
-                <div class="media-links"></div>
+          <div className="col-xl-6 col-sm-6 advertisement branding">
+            <div className="vertical-item item-gallery content-absolute gallery text-center ls">
+              <div className="item-media">
+                {/*<img*/}
+                {/*  src={data.portfolio2.childImageSharp.original.src}*/}
+                {/*  alt="Portfolio 2"*/}
+                {/*/>*/}
+                <div className="media-links"/>
               </div>
-              <div class="item-content">
+              <div className="item-content">
                 <h6>
-                  <a class="tags small-text" href="/gallery-item.html">
+                  <a className="tags small-text" href="/gallery-item.html">
                     Photo
                   </a>
                   <br />
@@ -125,39 +125,39 @@ const PortfolioGallery = () => {
             <div className="vertical-item item-gallery content-absolute gallery text-center ls">
               <div className="item-media">
                 <img
-                  src={data.portfolio1.childImageSharp.original.src}
+                  src={data.media1.childImageSharp.original.src}
                   alt="Portfolio 1"
                 />
-                <div className="media-links"></div>
+                <div className="media-links"/>
               </div>
               <div className="item-content">
                 <h6>
-                  <a className="tags small-text" href="/gallery-item.html">
-                    Photo
+                  <a className="tags small-text" href="/gallery-item.html" target="_blank" rel="noopener noreferrer">
+                    Megaplomerias
                   </a>
                   <br />
-                  <a href="/gallery-item.html">Lorem ipsum dolor sit</a>
+                  <a href="/gallery-item.html" target="_blank" rel="noopener noreferrer">Administración de Instagram para empresas</a>
                 </h6>
               </div>
             </div>
           </div>
 
-          <div class="col-xl-6 col-sm-6 advertisement branding">
-            <div class="vertical-item item-gallery content-absolute gallery text-center ls">
-              <div class="item-media">
+          <div className="col-xl-6 col-sm-6 advertisement branding">
+            <div className="vertical-item item-gallery content-absolute gallery text-center ls">
+              <div className="item-media">
                 <img
-                  src={data.portfolio2.childImageSharp.original.src}
+                  src={data.media2.childImageSharp.original.src}
                   alt="Portfolio 2"
                 />
-                <div class="media-links"></div>
+                <div className="media-links"/>
               </div>
-              <div class="item-content">
+              <div className="item-content">
                 <h6>
-                  <a class="tags small-text" href="/gallery-item.html">
-                    Photo
+                  <a className="tags small-text" href="https://www.facebook.com/skybiztravel/" target="_blank" rel="noopener noreferrer">
+                    Sky Biz Travel
                   </a>
                   <br />
-                  <a href="/gallery-item.html">Amet consetetur sadip</a>
+                  <a href="https://www.facebook.com/skybiztravel/" target="_blank" rel="noopener noreferrer">Crecimiento de fan page</a>
                 </h6>
               </div>
             </div>

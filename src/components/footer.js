@@ -18,29 +18,6 @@ const footer = () => {
                   src={FooterLogo}
                   alt="Ikigai marketer"
                 />
-                <div className="widget widget_social_buttons">
-                  <a
-                    href="http://www.facebook.com/#"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i className="fa fa-facebook color-icon"></i>
-                  </a>
-                  <a
-                    href="http://www.twitter.com/#"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i className="fa fa-instagram color-icon"></i>
-                  </a>
-                  <a
-                    href="http://www.linkedin.com/#"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <i className="fa fa-linkedin color-icon"></i>
-                  </a>
-                </div>
               </div>
             </div>
           </div>

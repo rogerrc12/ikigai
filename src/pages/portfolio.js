@@ -9,7 +9,7 @@ const Portfolio = () => {
       <Head title="Portafolio" />
 
       <section className="ls s-pt-50 s-pb-100 gallery-cols">
-        <div className="d-none d-lg-block divider-20"></div>
+        <div className="d-none d-lg-block divider-20"/>
         <div className="container">
           <div className="row">
             <div className="col-lg-12">

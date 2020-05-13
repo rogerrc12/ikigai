@@ -25,7 +25,7 @@ const Service = ({ data }) => {
   const { servicioBy } = data.singleService
   const { servicesList, advantages } = data.singleService.servicioBy.addons;
 
-  console.log(servicios);
+  
   return (
     <Layout
       location={`/services${servicioBy.slug}`}

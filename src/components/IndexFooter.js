@@ -41,56 +41,10 @@ const IndexFooter = () => {
                   IKIGAI
                   <span>MARKETER</span>
                 </h3>
-                <p className="next">
-                  We create experiences that change the way people interact with
-                  brands – and with each other.
-                </p>
-                <ul>
-                  <li className="icon-inline">
-                    <div className="icon-styled icon-top color-main fs-14">
-                      <i className="fa fa-map-marker" />
-                    </div>
-                    <p>90000, New Str. 123, Los Angeles, CA</p>
-                  </li>
-                  <li className="icon-inline">
-                    <div className="icon-styled icon-top color-main fs-14">
-                      <i className="fa fa-phone" />
-                    </div>
-                    <p>1-800-123-4567</p>
-                  </li>
-                  <li className="icon-inline">
-                    <div className="icon-styled icon-top color-main fs-14">
-                      <i className="fa fa-envelope" />
-                    </div>
-                    <p>
-                      <a href="https://google.com">email@example.com</a>
-                    </p>
-                  </li>
-                </ul>
-                <div className="widget widget_social_buttons">
-                  <a
-                    href="https://facebook.com"
-                    className="facebook-icon rounded-icon"
-                  >
-                    <i className="fa fa-facebook"></i>
-                  </a>
-                  <a
-                    href="https://instagram.com"
-                    className="instagram-icon rounded-icon"
-                  >
-                    <i className="fa fa-instagram"></i>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/"
-                    className="linkedin-icon rounded-icon"
-                  >
-                    <i className="fa fa-linkedin"></i>
-                  </a>
-                </div>
               </div>
             </div>
             <div
-              className="col-md-4 text-center animate mailchimp"
+              className="col-md-4 text-center animate"
               data-animation="fadeInUp"
             >
               <div className="widget widget_mailchimp">
@@ -112,6 +66,48 @@ const IndexFooter = () => {
                   />
                   <div className="response" />
                 </form>
+              </div>
+              <ul>
+                <li className="icon-inline">
+                  <div className="icon-styled icon-top color-main fs-14">
+                    <i className="fa fa-map-marker" />
+                  </div>
+                  <p>90000, New Str. 123, Los Angeles, CA</p>
+                </li>
+                <li className="icon-inline">
+                  <div className="icon-styled icon-top color-main fs-14">
+                    <i className="fa fa-phone" />
+                  </div>
+                  <p>1-800-123-4567</p>
+                </li>
+                <li className="icon-inline">
+                  <div className="icon-styled icon-top color-main fs-14">
+                    <i className="fa fa-envelope" />
+                  </div>
+                  <p>
+                    <a href="https://google.com">email@example.com</a>
+                  </p>
+                </li>
+              </ul>
+              <div className="widget widget_social_buttons">
+                <a
+                  href="https://facebook.com"
+                  className="facebook-icon rounded-icon"
+                >
+                  <i className="fa fa-facebook"/>
+                </a>
+                <a
+                  href="https://instagram.com"
+                  className="instagram-icon rounded-icon"
+                >
+                  <i className="fa fa-instagram"/>
+                </a>
+                <a
+                  href="https://www.linkedin.com/"
+                  className="linkedin-icon rounded-icon"
+                >
+                  <i className="fa fa-linkedin"/>
+                </a>
               </div>
             </div>
             <div className="divider-10 d-none d-xl-block" />
