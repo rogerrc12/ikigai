@@ -37,9 +37,9 @@ function MiniContact() {
             </div>
             <h6>Llámanos</h6>
             <p>
-              <strong>New Accounts:</strong> 1-800-123-4567
+              <strong>Local:</strong> +51-1-693-8145
               <br />
-              <strong>Support:</strong> 1-800-123-4569
+              <strong>Móvil:</strong> +51-918-371-703
             </p>
           </div>
           <div className="col-lg-4 text-center">
@@ -53,7 +53,7 @@ function MiniContact() {
             </div>
             <h6>Escríbenos</h6>
             <p>
-              info@ikigaimarketer.com
+              <a href="">info@ikigaimarketer.com</a>
             </p>
           </div>
           <div className="col-lg-4 text-center">

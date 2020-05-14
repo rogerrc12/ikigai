@@ -14,10 +14,10 @@ const socialIcons = () => {
       <a href="https://www.instagram.com/ikigaimarketer/" target="_blank" rel="noopener noreferrer">
         <i className="fa fa-instagram" aria-hidden="true" />
       </a>
-      <a href="#">
+      <a href="https://www.linkedin.com/company/ikigai-marketer/" target="_blank" rel="noopener noreferrer">
         <i className="fa fa-linkedin-square" aria-hidden="true" />
       </a>
-      <a href="#">
+      <a href="https://twitter.com/ikigaimarketer" target="_blank" rel="noopener noreferrer">
         <i className="fa fa-twitter-square" aria-hidden="true" />
       </a>
     </div> 

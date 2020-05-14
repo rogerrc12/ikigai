@@ -78,35 +78,50 @@ const IndexFooter = () => {
                   <div className="icon-styled icon-top color-main fs-14">
                     <i className="fa fa-phone" />
                   </div>
-                  <p>1-800-123-4567</p>
+                  <p>+51-1-693-8145</p>
+                  <p>+51-918-371-703</p>
                 </li>
                 <li className="icon-inline">
                   <div className="icon-styled icon-top color-main fs-14">
                     <i className="fa fa-envelope" />
                   </div>
                   <p>
-                    <a href="https://google.com">email@example.com</a>
+                    <a href="mailto: info@ikigaimarketer.com">info@ikigaimarketer.com</a>
                   </p>
                 </li>
               </ul>
               <div className="widget widget_social_buttons">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/ikigaimarketer/"
                   className="facebook-icon rounded-icon"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fa fa-facebook"/>
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/ikigaimarketer/"
                   className="instagram-icon rounded-icon"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fa fa-instagram"/>
                 </a>
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/company/ikigai-marketer/"
                   className="linkedin-icon rounded-icon"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fa fa-linkedin"/>
+                </a>
+                <a
+                  href="https://twitter.com/ikigaimarketer"
+                  className="twitter-icon rounded-icon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa fa-twitter"/>
                 </a>
               </div>
             </div>
@@ -121,7 +136,7 @@ const IndexFooter = () => {
             <div className="col-md-12 text-center">
               <p>
                 © Copyright
-                <span className="copyright_year">2018</span> All Rights Reserved
+                <span className="copyright_year">2020</span> Todos los derechos reservados
               </p>
             </div>
             <div className="divider-20 d-none d-lg-block" />

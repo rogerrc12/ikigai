@@ -86,18 +86,23 @@ const IndexPage = ({ data }) => {
                     <div className="intro-layer  z-index-10">
                       <div className="slide-social-icons float-right">
                         <div className="animate" data-animation="fadeInDown">
-                          <a href="https://www.facebook.com">
+                          <a href="https://www.facebook.com/ikigaimarketer/" target="_blank" rel="noopener noreferrer">
                             <i className="fa fa-facebook" />
                           </a>
                         </div>
                         <div className="animate" data-animation="fadeInDown">
-                          <a href="https://www.linkedin.com/">
+                          <a href="https://www.linkedin.com/company/ikigai-marketer/" target="_blank" rel="noopener noreferrer">
                             <i className="fa fa-linkedin" />
                           </a>
                         </div>
                         <div className="animate" data-animation="fadeInDown">
-                          <a href="https://www.instagram.com/">
-                            <i className="fa fa-instagram last" />
+                          <a href="https://www.instagram.com/ikigaimarketer/" target="_blank" rel="noopener noreferrer">
+                            <i className="fa fa-instagram" />
+                          </a>
+                        </div>
+                        <div className="animate" data-animation="fadeInDown">
+                          <a href="https://twitter.com/ikigaimarketer" target="_blank" rel="noopener noreferrer">
+                            <i className="fa fa-twitter last" />
                           </a>
                         </div>
                       </div>

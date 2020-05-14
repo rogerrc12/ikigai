@@ -29,7 +29,7 @@ function PortfolioList() {
         </div>
         <div className="item-content">
           <h6>
-            <a className="small-text" href={item.details.link}>
+            <a className="small-text" href={item.details.link} target="_blank" rel="noopener noreferrer">
               {item.categories.nodes[0].name}
             </a>
           </h6>

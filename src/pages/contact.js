@@ -22,7 +22,7 @@ const Contact = ({ data }) => {
               <h6>
                 Atención inmediata en nuestros canales:
               </h6>
-              <a href="https://wa.me/51930463531?text=Estoy%20interesado%20en%20sus%20servicios"
+              <a href="https://wa.me/51918371703?text=Estoy%20interesado%20en%20sus%20servicios"
                  target="_blank" rel="noopener noreferrer"
                 className="btn btn-outline-maincolor3" style={{marginRight: '15px'}}>
                 Whatsapp
