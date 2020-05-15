@@ -65,7 +65,7 @@ const Header = ({ sectionTitle }) => {
               <div className="col-xl-2 col-lg-3 text-lg-left text-xl-right d-none d-lg-block">
                 <div className="header_phone">
                   <h6>
-                    <span>1-800</span>-123-4567
+                    <span>+51 </span>918 371 703
                   </h6>
                 </div>
               </div>

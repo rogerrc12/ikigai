@@ -10629,6 +10629,11 @@ a.linkedin-icon .fa::after{
 	left: -125%;
 }
 
+a.twitter-icon .fa::after {
+	background-color: #00ACEE;
+	left: -115%;
+}
+
 /*social icons brand colors*/
 
 /*social icons default colors*/
@@ -19577,6 +19582,10 @@ h4.margin {
 
 .page_footer.bordered-footer .widget_social_buttons {
 	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 @media (max-width: 767px) {

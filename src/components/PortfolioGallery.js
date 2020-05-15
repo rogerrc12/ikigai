@@ -17,7 +17,7 @@ const PortfolioGallery = () => {
         childImageSharp { original { src } }
       }
         
-      media1: file(relativePath: { eq: "gallery/media01.png" }) {
+      media1: file(relativePath: { eq: "gallery/media01.jpg" }) {
           childImageSharp { original { src } }
       }
         
@@ -126,17 +126,17 @@ const PortfolioGallery = () => {
               <div className="item-media">
                 <img
                   src={data.media1.childImageSharp.original.src}
-                  alt="Portfolio 1"
+                  alt="Instakash"
                 />
                 <div className="media-links"/>
               </div>
               <div className="item-content">
                 <h6>
-                  <a className="tags small-text" href="/gallery-item.html" target="_blank" rel="noopener noreferrer">
-                    Megaplomerias
+                  <a className="tags small-text" href="https://www.instagram.com/instakashnet/" target="_blank" rel="noopener noreferrer">
+                    Instakash
                   </a>
                   <br />
-                  <a href="/gallery-item.html" target="_blank" rel="noopener noreferrer">Administración de Instagram para empresas</a>
+                  <a href="https://www.instagram.com/instakashnet/" target="_blank" rel="noopener noreferrer">Administración de perfil empresarial</a>
                 </h6>
               </div>
             </div>
@@ -153,11 +153,11 @@ const PortfolioGallery = () => {
               </div>
               <div className="item-content">
                 <h6>
-                  <a className="tags small-text" href="https://www.facebook.com/skybiztravel/" target="_blank" rel="noopener noreferrer">
-                    Sky Biz Travel
+                  <a className="tags small-text" href="https://www.facebook.com/Satcell.us/" target="_blank" rel="noopener noreferrer">
+                    Satcell US
                   </a>
                   <br />
-                  <a href="https://www.facebook.com/skybiztravel/" target="_blank" rel="noopener noreferrer">Crecimiento de fan page</a>
+                  <a href="https://www.facebook.com/Satcell.us/" target="_blank" rel="noopener noreferrer">Crecimiento de fan page Satcell</a>
                 </h6>
               </div>
             </div>

@@ -53,7 +53,7 @@ function MiniContact() {
             </div>
             <h6>Escríbenos</h6>
             <p>
-              <a href="">info@ikigaimarketer.com</a>
+              <a href="mailto: info@ikigaimarketer.com">info@ikigaimarketer.com</a>
             </p>
           </div>
           <div className="col-lg-4 text-center">

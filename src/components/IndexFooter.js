@@ -1,7 +1,21 @@
 import React from "react"
-import Icon from "../assets/img/icon.svg"
+import Icon from "../assets/img/icon.svg";
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import Moment from "react-moment"
 
 const IndexFooter = () => {
+  const { wordpress: { posts: { nodes: posts } } } = useStaticQuery(graphql`
+      {
+          wordpress {
+              posts(first: 2) {
+                  nodes { title slug date }
+              }
+          }
+      }
+  `);
+  
+  console.log(posts);
+  
   return (
     <>
       <footer className="page_footer ds s-parallax s-pt-60 s-pb-30 s-pt-md-130 s-pb-md-10 s-pt-lg-130 s-pb-lg-0 s-py-xl-100 c-gutter-60 bordered-footer bottom-none">
@@ -15,17 +29,17 @@ const IndexFooter = () => {
               <div className="widget widget_text">
                 <div className="blog-footer">
                   <h3 className="widget-title next-image-background">
-                    Recent Post
+                    Posts recientes
                   </h3>
-                  <p>3 Tips to Refresh a Lackluster Marketing Strategy</p>
-                  <a className="small-text" href="https://google.com">
-                    January 11, 2018
-                  </a>
-                  <div className="divider-25 d-none d-xl-block" />
-                  <p>Maximize B2B Website Retargeting</p>
-                  <a className="small-text" href="https://google.com">
-                    January 08, 2018
-                  </a>
+                  {posts.map(post => (
+                    <div key={post.slug}>
+                      <p>{post.title}</p>
+                      <Link className="small-text" to={`/blog/post/${post.slug}`}>
+                        <Moment format="Do MMM, YYYY">{post.date}</Moment>
+                      </Link>
+                      <div className="divider-25 d-none d-xl-block" />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -50,8 +64,8 @@ const IndexFooter = () => {
               <div className="widget widget_mailchimp">
                 <h3 className="widget-title">Newsletter</h3>
                 <p>
-                  Enter your email address here always to be
-                  <br /> updated. We promise not to spam!
+                  Ingresa tu correo para siempre estar actualizado
+                  de nuestras promociones y tarifas!
                 </p>
                 <form className="signup" action="/">
                   <label htmlFor="mailchimp_email">
@@ -62,7 +76,7 @@ const IndexFooter = () => {
                     name="email"
                     type="email"
                     className="form-control mailchimp_email"
-                    placeholder="Email address"
+                    placeholder="Correo electrónico"
                   />
                   <div className="response" />
                 </form>
@@ -72,7 +86,7 @@ const IndexFooter = () => {
                   <div className="icon-styled icon-top color-main fs-14">
                     <i className="fa fa-map-marker" />
                   </div>
-                  <p>90000, New Str. 123, Los Angeles, CA</p>
+                  <p>Av. el Ejercito 749 Miraflores, Lima, Peru</p>
                 </li>
                 <li className="icon-inline">
                   <div className="icon-styled icon-top color-main fs-14">
