@@ -141,13 +141,12 @@ const IndexPage = ({ data }) => {
                   <div className="divider-35" />
                 </div>
                 <h5>
-                  Nuestro Ikigai: <br /> “Es hacer que el usuario te encuentre a ti en vez de ir a buscarlo”.
+                  Nuestro Ikigai: <br /> “Es conectar tu marca con tus clientes”.
                 </h5>
                 <p>
-                  Estar en internet es fácil!, pero tener éxito es otra historia. 
-                  Necesitaras de verdaderos <strong>expertos</strong> que te lleven de la mano. 
-                  Con nuestro profesionales en ventas, marketing y programación 
-                  tendrás estrategias claras y soluciones de inbound marketing adaptadas, haciendo que tu éxito sea inevitable.
+                  ¿Ya tu marca está en internet? Sí es así, ya has dado el primer paso en un largo e interesante camino, 
+                  ahora, no tienes que hacerlo solo, te invito a que el resto del camino lo hagamos juntos,
+                  cumpliendo tus objetivos para el posicionamiento de tu marca.
                 </p>
                 <div className="divider-30" />
                 <div className="img-wrap text-center">
