@@ -54,7 +54,7 @@ const IndexPage = ({ data }) => {
                         data-animation="fadeInDown"
                       >
                         <h2 className="text-uppercase intro_featured_word">
-                          Agencia de Marketing
+                          Agencia de <strong style={{ fontWeight: 600 }}>Marketing</strong>
                         </h2>
                       </div>
                       <div
@@ -77,8 +77,8 @@ const IndexPage = ({ data }) => {
                         className="intro_layer page-bottom animate"
                         data-animation="pullDown"
                       >
-                        <Link className="btn btn-maincolor" to="/contact">
-                          Comencemos
+                        <Link className="btn btn-maincolor" to="/services">
+                          ¿Que hacemos?
                         </Link>
                       </div>
                     </div>
@@ -154,13 +154,8 @@ const IndexPage = ({ data }) => {
                 </div>
                 <div>
                   <div className="divider-40" />
-                  <button type="button" className="btn btn-outline-maincolor">
-                    Comencemos
-                  </button>
+                  <h5>Como lo hacemos</h5>
                   <div className="divider-40" />
-                </div>
-                <div className="img-wrap text-center">
-                  <img src={VerticalLine} alt="vertical line" />
                 </div>
                 <div className="divider-10 d-none d-xl-block" />
               </div>
@@ -177,6 +172,7 @@ const IndexPage = ({ data }) => {
       >
         <div className="container">
           <div className="divider-65" />
+          
           <Steps />
           
           <div className="divider-10 d-block d-sm-none" />
@@ -184,9 +180,10 @@ const IndexPage = ({ data }) => {
             <img src={VerticalLine2} alt="vertical line" />
           </div>
           <div className=" white-button text-center">
-            <Link className="btn white-btn" to="/services">
-              Comencemos
-            </Link>
+            <a className="btn white-btn" href="https://wa.me/51918371703?text=Estoy%20interesado%20en%20sus%20servicios"
+               target="_blank" rel="noopener noreferrer">
+              ¡Quiero contactarlos!
+            </a>
           </div>
           <div className="divider-30 d-none d-xl-block" />
         </div>
@@ -201,8 +198,11 @@ const IndexPage = ({ data }) => {
         <div className="container">
           <div className="row c-mb-50 c-mb-md-60">
             <div className="d-none d-lg-block divider-20" />
+            
             <Services />
+            
           </div>
+          
           <div className="pink-line text-center">
             <img src={PinkLine} alt="pink line" />
           </div>
@@ -212,7 +212,9 @@ const IndexPage = ({ data }) => {
       {/* Team Slider Home */}
       <section className="page_slider team_slider" id="team">
         <div className="container-fluid">
+          
           <TeamSlider />
+          
         </div>
       </section>
       
@@ -235,8 +237,9 @@ const IndexPage = ({ data }) => {
               <img src={VerticalLine} alt="vertical Line" />
               <div>
                 <div className="divider-40" />
-                <a href="/" className="btn btn-outline-maincolor">
-                  Empecemos
+                <a href="https://wa.me/51918371703?text=Estoy%20interesado%20en%20sus%20servicios"
+                   target="_blank" rel="noopener noreferrer" className="btn btn-outline-maincolor">
+                  ¡Quiero contactarlos!
                 </a>
                 <div className="divider-30" />
               </div>

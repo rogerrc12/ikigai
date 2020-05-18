@@ -8,7 +8,7 @@ const TeamSlider = () => {
   const { wordpress: { equipo: { nodes: team } } } = useStaticQuery(graphql`
     {
       wordpress {
-      equipo {
+      equipo(where: {orderby: {field: DATE, order: ASC}}) {
           nodes {
             details { photo { altText sourceUrl(size: LARGE) } ocupation fullName }
           }

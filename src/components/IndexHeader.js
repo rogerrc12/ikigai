@@ -64,7 +64,7 @@ const IndexHeader = () => {
             role="button"
             tabIndex={0}
           >
-            <span></span>
+            <span/>
           </span>
           <div className="scroll-wrapper scrollbar-macosx">
             <div className="side_header_inner">
@@ -102,6 +102,27 @@ const IndexHeader = () => {
                     </ul>
                   </nav>
                   {/* eof main side nav */}
+                  <div className="contact-nav__footer">
+                    <a href="tel:+51918371703">+51 918 371 703</a>
+                    <div className="contact-nav__social">
+
+                      <a href="https://www.facebook.com/ikigaimarketer/" target="_blank" rel="noreferrer noopener">
+                        <i className="fa fa-facebook" aria-hidden="true" />
+                      </a>
+
+                      <a href="https://www.instagram.com/ikigaimarketer/" target="_blank" rel="noreferrer noopener">
+                        <i className="fa fa-instagram" aria-hidden="true" />
+                      </a>
+
+                      <a href="https://www.linkedin.com/company/ikigai-marketer/" target="_blank" rel="noreferrer noopener">
+                        <i className="fa fa-linkedin" aria-hidden="true" />
+                      </a>
+
+                      <a href="https://twitter.com/ikigaimarketer" target="_blank" rel="noreferrer noopener">
+                        <i className="fa fa-twitter" aria-hidden="true" />
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

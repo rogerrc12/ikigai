@@ -96,7 +96,7 @@ const Header = ({ sectionTitle }) => {
                 </li>
                 <li className="breadcrumb-item active">{sectionTitle}</li>
               </ol>
-              <div className="divider-15 d-none d-xl-block"></div>
+              <div className="divider-15 d-none d-xl-block"/>
             </div>
           </div>
         </div>

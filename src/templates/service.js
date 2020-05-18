@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import parser from "html-react-parser"
 import Head from "../components/head"
@@ -13,7 +13,7 @@ export const query = graphql`
         title
         slug
         featuredImage { sourceUrl altText }
-        addons { advantages { description } servicesList { description percentage } }
+        addons { advantages { description } servicesList { description slug } }
       }
     }
     allServices: wordpress { servicios { nodes { title slug } } }
@@ -24,11 +24,10 @@ const Service = ({ data }) => {
   const { servicios: { nodes: servicios } } = data.allServices;
   const { servicioBy } = data.singleService
   const { servicesList, advantages } = data.singleService.servicioBy.addons;
-
   
   return (
     <Layout
-      location={`/services${servicioBy.slug}`}
+      location={`/services/${servicioBy.slug}`}
       sectionTitle={servicioBy.title}
     >
       <Head title={servicioBy.title} />
@@ -37,7 +36,7 @@ const Service = ({ data }) => {
         <div className="d-none d-lg-block divider-65"/>
         <div className="container">
           <div className="row">
-            <div className="col-md-4 c-gutter-50 service-widget">
+            <div className="col-md-4 c-gutter-50 service-widget d-none d-md-block">
 
               <h6>Nuestros servicios</h6>
 
@@ -61,23 +60,19 @@ const Service = ({ data }) => {
                     <div className="progress-service">
                       <h6>Nuestra Experiencia</h6>
                       {servicesList.map((addon, i) => (
-                        <Fragment key={i}>
-                          <p className="progress-title">{addon.description}</p>
-                          <div className="progress">
-                            <div
-                              className="progress-bar bg-maincolor"
-                              role="progressbar"
-                            >
-                            </div>
-                          </div>
-                        </Fragment>
+                          servicioBy.slug === 'social-media'
+                            ?
+                              <Link key={i} to={`/service/${servicioBy.slug}/${addon.slug}`}>
+                                <p className="progress-title">{addon.description}</p>
+                              </Link>
+                            : <p key={i} className="progress-title">{addon.description}</p>
                       ))}
                     </div>
                   </div>
                   <div className="col-md-12 col-lg-6 list-comtent">
-                    <h6>Nuestras Ventajas</h6>
+                    <h6>Nuestras fortalezas</h6>
                     <ul className="list1">
-                      {advantages.map((advantage, i) => <li key={i}>{advantage.description}</li>)}
+                      {advantages.map((advantage, i) => <li key={i}>{advantage.description}</li> )}
                     </ul>
                   </div>
                 </div>

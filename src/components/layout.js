@@ -5,7 +5,7 @@ import IndexHeader from "./IndexHeader"
 import Footer from "./footer"
 import IndexFooter from "./IndexFooter"
 
-const socialIcons = () => {
+const SocialIcons = () => {
   return (
     <div className="social_icons">
       <a href="https://www.facebook.com/ikigaimarketer/" target="_blank" rel="noopener noreferrer">
@@ -40,17 +40,18 @@ const Layout = ({ location, children, sectionTitle }) => {
           )}
 
           {location === "/blog" ? children : <main>{children}</main>}
-
-          {location !== "/" ?
-            <>  
-              <Footer />
-              {socialIcons()}
-            </>
-            : <IndexFooter />
-          }
-        </div>
   
-        {location !== '/contact' ? <div className="elfsight-app-8307196d-71bd-4c5d-947d-d69a87fdce9c"/> : null}
+          <Footer />
+          
+        </div>
+        
+        {location !== '/' ? <SocialIcons /> : null}
+        {location !== '/contact' 
+          ? <a href="https://wa.me/51918371703?text=Estoy%20interesado%20en%20sus%20servicios"
+               className="whatsapp-btn" target="_blank" rel="noopener noreferrer"
+            >
+              <i className="fa fa-envelope" style={{ marginRight: '5px' }} /> Consultoria gratuita
+            </a> : null}
       </div>
     </>
   )

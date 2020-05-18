@@ -14,8 +14,6 @@ const IndexFooter = () => {
       }
   `);
   
-  console.log(posts);
-  
   return (
     <>
       <footer className="page_footer ds s-parallax s-pt-60 s-pb-30 s-pt-md-130 s-pb-md-10 s-pt-lg-130 s-pb-lg-0 s-py-xl-100 c-gutter-60 bordered-footer bottom-none">

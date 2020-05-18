@@ -7001,7 +7001,7 @@ body.boxed {
 .ls h4 a:hover,
 .ls h5 a:hover,
 .ls h6 a:hover {
-	color: #ff497c;
+	color: var(--dark-magenta-ikigai);
 }
 
 .ls .btn-maincolor:hover,
@@ -7299,7 +7299,7 @@ body.boxed {
 }
 
 .ds .ls a:not(.btn):hover {
-	color: var(--light-magenta-ikigai);
+	color: var(--dark-magenta-ikigai);
 }
 
 .ds label {
@@ -12576,12 +12576,12 @@ body.active-side-header.slide-right .page_header_side {
 	}
 
 	.page_slider p {
-		font-size: 1.3em;
+		font-size: 1.15em;
 		margin-bottom: -.5rem;
 	}
 
 	.page_slider span {
-		font-size: 2rem;
+		font-size: 1.7rem;
 	}
 }
 
@@ -13288,8 +13288,8 @@ body.active-side-header.slide-right .page_header_side {
 }
 
 .page_slider.static .intro_after_featured_word {
-	color: #7f7f7f;
-	font-size: 14px;
+	color: #bbb;
+	font-size: 1rem;
 	letter-spacing: 1em;
 	margin-bottom: 31px;
 }
@@ -15227,6 +15227,9 @@ h4.comments-title {
 
 .post5 .entry-blog-share {
 	float: right;
+	position: absolute;
+	right: 0;
+	top: 28%;
 }
 
 .post5 .entry-blog-share i {
@@ -16769,6 +16772,14 @@ a.btn {
 	margin-top: 35px;
 }
 
+.progress-service a .progress-title {
+	color: #019eda;
+}
+
+.progress-service a:hover .progress-title {
+	color: #0389bd;
+}
+
 @media (max-width: 991px) {
 	.service-item4 .progress-service {
 		margin-top: 10px;
@@ -16815,6 +16826,27 @@ a.btn {
 	margin-top: -27px;
 	position: absolute;
 	text-transform: uppercase;
+}
+
+.whatsapp-btn {
+	position: fixed;
+	padding: .3rem 1rem;
+	border-radius: 20px;
+	bottom: 1.5rem;
+	right: 1.5rem;
+	background-color: #128C7E;
+	color: #fff;
+	transition: 25ms ease-in-out;
+	font-size: .9rem;
+	font-weight: 500;
+	cursor: pointer;
+	z-index: 999;
+}
+
+.whatsapp-btn:focus,
+.whatsapp-btn:hover {
+	background-color: #0e7166;
+	color: #fff;
 }
 
 .left-part {
@@ -16881,7 +16913,7 @@ a.btn {
 }
 
 .breadcrumb-item a {
-	color: var(--light-magenta-ikigai);
+	color: var(--dark-magenta-ikigai);
 	letter-spacing: 2px;
 }
 
@@ -17932,7 +17964,7 @@ a.btn {
 }
 
 .link-a a {
-	color: #ff497c;
+	color: var(--dark-magenta-ikigai);
 }
 
 .link-a a:hover {
@@ -19973,6 +20005,28 @@ h4.margin {
 
 .page_header_side.main-toggle .header-side-menu span.toggle_submenu {
 	display: none;
+}
+
+.contact-nav__footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5rem;
+}
+
+.contact-nav__footer a {
+	color: #fff !important;
+	font-weight: 500;
+	font-size: 1.1rem;
+	opacity: .55;
+}
+
+.contact-nav__social {
+	margin-left: 4rem;
+}
+
+.contact-nav__social a {
+	margin: 0 .5rem;
 }
 
 .page_header_side.main-toggle .menu-click a {
