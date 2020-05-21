@@ -58,7 +58,7 @@ const Service = ({ data }) => {
                 <div className="row c-gutter-60 c-mb-20 c-mb-lg-40">
                   <div className="col-md-12 col-lg-6 left-part">
                     <div className="progress-service">
-                      <h6>Nuestra Experiencia</h6>
+                      <h6>Nuestras fortalezas</h6>
                       {servicesList.map((addon, i) => (
                           servicioBy.slug === 'social-media'
                             ?
@@ -70,7 +70,7 @@ const Service = ({ data }) => {
                     </div>
                   </div>
                   <div className="col-md-12 col-lg-6 list-comtent">
-                    <h6>Nuestras fortalezas</h6>
+                    <h6>Nuestras ventajas</h6>
                     <ul className="list1">
                       {advantages.map((advantage, i) => <li key={i}>{advantage.description}</li> )}
                     </ul>

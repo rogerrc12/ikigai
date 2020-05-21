@@ -17080,6 +17080,7 @@ a.btn {
 .testimonials-sliders {
 	background-color: #1f2732;
 	background-image: url("../img/parallax/texture-process.png");
+	padding-bottom: 5rem;
 }
 
 .testimonials-sliders .small-text.author-job {
