@@ -35,10 +35,10 @@ module.exports = {
     {
       resolve: `gatsby-source-graphql`,
       options: {
-        typeName: "WORDPRESS",
+        typeName: "WPGraphQL",
         fieldName: "wordpress",
-        url: "https://testing.ikigaimarketer.com/wordpress/graphql",
-        refetchInterval: 60,
+        url: "https://wordpress.ikigaimarketer.com/graphql",
+        refetchInterval: 120
       },
     },
     {

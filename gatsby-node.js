@@ -55,6 +55,27 @@ async function createServicePages ({ graphql, actions }) {
   )
 }
 
+async function createSocialMediaPages ({ graphql, actions }) {
+  const { createPage } = actions;
+  const singleTemplate = path.join(__dirname, "src", "templates", "serviceSingle.js");
+  
+  const { data: { wordpress: { social_medias: { nodes: socialMediaSlugs } } } } = await graphql(`
+    {
+      wordpress {
+        social_medias { nodes { slug }  }
+      }
+    }
+  `);
+  
+  socialMediaSlugs.map(media => {
+    createPage({
+      component: singleTemplate,
+      path: `/services/social-media/${media.slug}`,
+      context: { slug: media.slug }
+    })
+  })
+}
+
 async function createPostPages ({ graphql, actions }) {
   const { createPage } = actions;
   const postTemplate = path.join(__dirname, "src", "templates", "post.js");
@@ -80,6 +101,7 @@ exports.createPages = async ({ graphql, actions }) => {
   await Promise.all([
     paginate({ graphql, actions }),
     createPostPages({ graphql, actions }),
-    createServicePages({ graphql, actions })
+    createServicePages({ graphql, actions }),
+    createSocialMediaPages({ graphql, actions })
   ]);
 }

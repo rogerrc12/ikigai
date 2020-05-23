@@ -9,6 +9,8 @@ import parser from 'html-react-parser';
 import VerticalLine from "../assets/img/vertical_line.png"
 import VerticalLine2 from "../assets/img/vertical_line2.png"
 import PinkLine from "../assets/img/pink_line_big.png"
+import BGVIdeoMp4 from '../assets/videos/background-video.mp4';
+import BgVIdeoWebm from '../assets/videos/background-video.webm';
 import { graphql, Link } from "gatsby";
 import Moment from "react-moment"
 
@@ -33,97 +35,48 @@ const IndexPage = ({ data }) => {
       <Head title="Agencia onmicanal" />
 
       {/* Slide Section */}
-      <section className="page_slider main_slider corner-bottom static">
+      <section className="page_slider main_slider home_slider">
         <div className="flexslider" data-nav="true" data-dots="false">
-          <div className="ds text-left">
+          <div className="ds text-center">
             <span className="flexslider-overlay" />
             <span className="embed-responsive embed-responsive-16by9">
-              <iframe
-                src="https://www.youtube.com/embed/gY4fETApNh4?feature=oembed&showinfo=0&autoplay=1&controls=0&mute=1&loop=1&playlist=gY4fETApNh4"
-                allowFullScreen
-                title="presentation"
-              />
+              <video muted autoPlay>
+                <source src={BGVIdeoMp4} type="video/mp4" />
+                <source src={BgVIdeoWebm} type="video/webm" />
+              </video>
             </span>
             <div className="container">
               <div className="row">
-                <div className="col-12 itro_slider">
-                  <div className="intro_layers_wrapper">
-                    <div className="intro_layers">
-                      <div
-                        className="intro_layer animate"
-                        data-animation="fadeInDown"
-                      >
-                        <h2 className="text-uppercase intro_featured_word">
-                          Agencia de <strong style={{ fontWeight: 600 }}>Marketing</strong>
-                        </h2>
-                      </div>
-                      <div
-                        className="intro_layer animate"
-                        data-animation="fadeInUp"
-                      >
-                        <h2 className="text-uppercase intro_featured_word name">
-                          Digital
-                        </h2>
-                      </div>
-                      <div
-                        className="intro_layer animate"
-                        data-animation="fadeIn"
-                      >
-                        <p className="text-uppercase intro_after_featured_word">
-                          Cumpliendo tus propósitos
-                        </p>
-                      </div>
-                      <div
-                        className="intro_layer page-bottom animate"
-                        data-animation="pullDown"
-                      >
-                        <Link className="btn btn-maincolor" to="/services">
-                          ¿Que hacemos?
-                        </Link>
-                      </div>
-                    </div>
-                    {/* eof .intro_layers */}
-                    <div className="intro-layer  z-index-10">
-                      <div className="slide-social-icons float-right">
-                        <div className="animate" data-animation="fadeInDown">
-                          <a href="https://www.facebook.com/ikigaimarketer/" target="_blank" rel="noopener noreferrer">
-                            <i className="fa fa-facebook" />
-                          </a>
-                        </div>
-                        <div className="animate" data-animation="fadeInDown">
-                          <a href="https://www.linkedin.com/company/ikigai-marketer/" target="_blank" rel="noopener noreferrer">
-                            <i className="fa fa-linkedin" />
-                          </a>
-                        </div>
-                        <div className="animate" data-animation="fadeInDown">
-                          <a href="https://www.instagram.com/ikigaimarketer/" target="_blank" rel="noopener noreferrer">
-                            <i className="fa fa-instagram" />
-                          </a>
-                        </div>
-                        <div className="animate" data-animation="fadeInDown">
-                          <a href="https://twitter.com/ikigaimarketer" target="_blank" rel="noopener noreferrer">
-                            <i className="fa fa-twitter last" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                <div className="col-12 intro_slider">
+                  <p className="text-uppercase intro_after_featured_word">Ikigai Marketer</p>
+                  <h2 className="text-uppercase intro_featured_word">
+                    Marketing Digital
+                  </h2>
+                  <h3 className="intro_before_featured_word">
+                    <span className="color-main2">Web Design</span>,{" "}
+                    <span className="color-main3">Marketing</span> &{" "}
+                    <span className="color-main4">Branding</span>
+                  </h3>
+                  <div className="intro_layer page-bottom">
+                    <Link className="btn btn-maincolor" to="/services">Comencemos</Link>
                   </div>
-                  {/* eof .intro_layers_wrapper */}
+            
                 </div>
-                {/* eof .col-* */}
-                <div className="flexslider-bottom d-none d-xl-block">
-                  <a href="#about">
-                    <i className="mouse-button animated floating" />
-                  </a>
-                </div>
+            
               </div>
-              {/* eof .row */}
+            
             </div>
-            {/* eof .container */}
+            
           </div>
+          
         </div>
         {/* eof flexslider */}
+  
+        <div className="flexslider-bottom d-none d-xl-block">
+          <a href="#about" className="mouse-button animated floating"/>
+        </div>
       </section>
+      
       <div className="divider-10 d-block d-sm-none" />
 
       {/* About Home */}

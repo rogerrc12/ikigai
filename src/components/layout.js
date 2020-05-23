@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import Header from "./header"
 import IndexHeader from "./IndexHeader"
 import Footer from "./footer"
-import IndexFooter from "./IndexFooter"
 
 const SocialIcons = () => {
   return (
@@ -24,7 +23,7 @@ const SocialIcons = () => {
   )
 }
 
-const Layout = ({ location, children, sectionTitle }) => {
+const Layout = ({ location, children, sectionTitle, slug }) => {
   return (
     <>
       {/* <div className="preloader">
@@ -34,12 +33,12 @@ const Layout = ({ location, children, sectionTitle }) => {
       <div id="canvas">
         <div id="box_wrapper">
           {location !== "/" ? (
-            <Header sectionTitle={sectionTitle} />
+            <Header sectionTitle={sectionTitle} slug={slug} />
           ) : (
             <IndexHeader />
           )}
 
-          {location === "/blog" ? children : <main>{children}</main>}
+          {location === "/blog" || `/servcies/social-media/${slug}` ?  children : <main>{children}</main>}
   
           <Footer />
           

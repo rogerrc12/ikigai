@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react"
 import { Link } from "gatsby"
 import Logo from "../assets/images/logo.svg"
 
-const Header = ({ sectionTitle }) => {
+const Header = ({ sectionTitle, slug }) => {
   const [active, setActive] = useState(false)
   const headerRef = useRef(),
         toggleRef = useRef();
@@ -94,6 +94,7 @@ const Header = ({ sectionTitle }) => {
                 <li className="breadcrumb-item">
                   <Link to="/">Home</Link>
                 </li>
+                {slug && <li className="breadcrumb-item"><Link to="/services/social-media">Social media marketing</Link></li>}
                 <li className="breadcrumb-item active">{sectionTitle}</li>
               </ol>
               <div className="divider-15 d-none d-xl-block"/>

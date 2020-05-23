@@ -62,7 +62,7 @@ const Service = ({ data }) => {
                       {servicesList.map((addon, i) => (
                           servicioBy.slug === 'social-media'
                             ?
-                              <Link key={i} to={`/service/${servicioBy.slug}/${addon.slug}`}>
+                              <Link key={i} to={`/services/${servicioBy.slug}/${addon.slug}`}>
                                 <p className="progress-title">{addon.description}</p>
                               </Link>
                             : <p key={i} className="progress-title">{addon.description}</p>
