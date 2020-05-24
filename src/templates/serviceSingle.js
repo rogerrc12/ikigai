@@ -46,65 +46,33 @@ const ServicesList = ({ services }) => (
   services.details.map(service => (
     <article className="single-service" key={service.subtitle}>
       <div className="row">
-        {service.align === 'left' ?
-          <>
-            <div className="col-12 col-md-8 order-md-1 order-2">
-    
-              <div className="entry-content">
-                <p className="excerpt">{service.subtitle}</p>
-      
-                {parser(service.description)}
-      
-                <ul className="list1">
-                  {service.scope.map((item, i) => <li key={i}>{item.scopeItem}</li>)}
-                </ul>
-      
-                <a href="https://wa.me/51918371703?text=Estoy%20interesado%20en%20sus%20servicios"
-                   target="_blank" rel="noopener noreferrer"
-                   className="btn btn-outline-maincolor3">
-                  ¡Quiero contactarlos!
-                </a>
-    
-              </div>
-  
-  
-            </div>
-  
-            <div className="col-12 col-md-4 order-md-2 order-1">
-              <div className="media-item">
-                <img src={service.image.sourceUrl} alt={service.image.altText} />
-              </div>
-            </div>
-          </> :
-          
-          <>
-            <div className="col-12 col-md-4">
-              <div className="media-item">
-                <img src={service.image.sourceUrl} alt={service.image.altText} />
-              </div>
-            </div>
-  
-            <div className="col-12 col-md-8">
-              <div className="entry-content">
-                <p className="excerpt">{service.subtitle}</p>
-    
-                {parser(service.description)}
-    
-                <ul className="list1">
-                  {service.scope.map((item, i) => <li key={i}>{item.scopeItem}</li>)}
-                </ul>
-    
-                <a href="https://wa.me/51918371703?text=Estoy%20interesado%20en%20sus%20servicios"
-                   target="_blank" rel="noopener noreferrer"
-                   className="btn btn-outline-maincolor3">
-                  ¡Quiero contactarlos!
-                </a>
-  
-              </div>
+        <div className={`col-12 col-md-8 ${service.align === 'left' ? 'order-md-1 order-2' : 'order-2' }`}>
 
-            </div>
-          </>
-        }
+          <div className="entry-content">
+            <p className="excerpt">{service.subtitle}</p>
+  
+            {parser(service.description)}
+  
+            <ul className="list1">
+              {service.scope.map((item, i) => <li key={i}>{item.scopeItem}</li>)}
+            </ul>
+  
+            <a href="https://wa.me/51918371703?text=Estoy%20interesado%20en%20sus%20servicios"
+               target="_blank" rel="noopener noreferrer"
+               className="btn btn-outline-maincolor">
+              ¡Quiero contactarlos!
+            </a>
+
+          </div>
+
+
+        </div>
+
+        <div className={`col-12 col-md-4 ${service.align === 'left' ? 'order-md-2 order-1' : 'order-1' }`}>
+          <div className="media-item">
+            <img src={service.image.sourceUrl} alt={service.image.altText} />
+          </div>
+        </div>
       </div>
     </article>
   ))

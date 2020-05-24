@@ -7271,7 +7271,7 @@ body.boxed {
 }
 
 .ds a:not(.btn):hover {
-	color: #ff497c;
+	color: var(--dark-magenta-ikigai);
 }
 
 .ds h1,
@@ -8239,18 +8239,18 @@ body.boxed {
 .response,
 .color-main1,
 .color-main {
-	border-color:var(--light-magenta-ikigai);
-	color:var(--light-magenta-ikigai) !important;
+	border-color:var(--yellow-ikigai);
+	color:var(--yellow-ikigai) !important;
 }
 
 .color-main2 {
-	border-color: var(--yellow-ikigai);
-	color: var(--yellow-ikigai) !important;
+	border-color: var(--dark-magenta-ikigai);
+	color: var(--dark-magenta-ikigai) !important;
 }
 
 .color-main3 {
-	border-color: #00bea3;
-	color: #00bea3 !important;
+	border-color: var(--light-magenta-ikigai);
+	color: var(--light-magenta-ikigai) !important;
 }
 
 .color-main4 {
@@ -11232,7 +11232,7 @@ a img.aligncenter {
 
 	.ds .sf-menu > li > a:hover,
 	.ds .sf-menu > li.active > a {
-		color: var(--light-magenta-ikigai);
+		color: var(--dark-magenta-ikigai);
 	}
 
 	.ls .sf-menu > li > a {
@@ -12793,7 +12793,7 @@ body.active-side-header.slide-right .page_header_side {
 
 	.page_slider .intro_before_featured_word {
 		font-size: 2.2rem;
-		font-weight: 200;
+		font-weight: 400;
 		line-height: 0.8;
 		margin: 0;
 		padding: 0 0.2em;
@@ -12827,7 +12827,7 @@ body.active-side-header.slide-right .page_header_side {
 
 	.page_slider .intro_before_featured_word {
 		font-size: 2rem;
-		font-weight: 200;
+		font-weight: 400;
 		margin-top: 0;
 	}
 
@@ -13613,7 +13613,7 @@ h4.entry-title {
 
 .entry-footer a,
 .entry-meta a {
-	color: #ff497c;
+	color: var(--dark-magenta-ikigai);
 	font-size: 12px;
 	font-weight: 700;
 	letter-spacing: 0.2em;
@@ -16520,11 +16520,7 @@ a.btn {
 
 /*footer social buttons that hidden on half of their height*/
 .page_footer {
-	/*overriding Bootstrap Addons buttons*/
-}
-
-.page_footer.s-parallax {
-	background-image: url("../img/parallax/footer_bg.png");
+	padding-bottom: 3rem;
 }
 
 @media (min-width: 576px) {
@@ -16584,6 +16580,7 @@ a.btn {
 	font-weight: 500;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
+	background-color: #1f2732;
 }
 
 .item-hover-content {
@@ -16689,7 +16686,7 @@ a.btn {
 }
 
 .service-item2 img {
-	max-width: 120px;
+	max-width: 6rem;
 }
 
 .service-item2 .vertical-item .item-content {
@@ -16872,6 +16869,12 @@ a.btn {
 	font-weight: 500;
 	cursor: pointer;
 	z-index: 999;
+}
+
+@media screen and (min-width: 900px) {
+	.whatsapp-btn {
+		font-size: 1.2rem;
+	}
 }
 
 .whatsapp-btn:focus,
@@ -17150,7 +17153,7 @@ a.btn {
 }
 
 .header_phone span {
-	color: var(--light-magenta-ikigai);
+	color: var(--yellow-ikigai);
 }
 
 @media (min-width: 1600px) {

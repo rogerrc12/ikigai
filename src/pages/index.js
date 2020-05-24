@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => {
           <div className="ds text-center">
             <span className="flexslider-overlay" />
             <span className="embed-responsive embed-responsive-16by9">
-              <video muted autoPlay>
+              <video muted autoPlay loop>
                 <source src={BGVIdeoMp4} type="video/mp4" />
                 <source src={BgVIdeoWebm} type="video/webm" />
               </video>
@@ -53,9 +53,9 @@ const IndexPage = ({ data }) => {
                     Marketing Digital
                   </h2>
                   <h3 className="intro_before_featured_word">
-                    <span className="color-main2">Web Design</span>,{" "}
-                    <span className="color-main3">Marketing</span> &{" "}
-                    <span className="color-main4">Branding</span>
+                    <span className="color-main1">Web Design</span>,{" "}
+                    <span className="color-main2">Marketing</span> &{" "}
+                    <span className="color-main3">Branding</span>
                   </h3>
                   <div className="intro_layer page-bottom">
                     <Link className="btn btn-maincolor" to="/services">Comencemos</Link>
@@ -73,7 +73,7 @@ const IndexPage = ({ data }) => {
         {/* eof flexslider */}
   
         <div className="flexslider-bottom d-none d-xl-block">
-          <a href="#about" className="mouse-button animated floating"/>
+          <span className="mouse-button animated floating" />
         </div>
       </section>
       
