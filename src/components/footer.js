@@ -10,13 +10,16 @@ const footer = () => {
           <div className="container">
             <div className="row">
               <div className="divider-20 d-none d-xl-block" />
-              <Fade bottom delay={300}>
-                <img
-                  className="margin-negative"
-                  src={FooterLogo}
-                  alt="Ikigai marketer"
-                />
-              </Fade>
+              
+                <Fade bottom delay={500}>
+                  <div className="col-md-12 mt-4 text-center animate footer_logo">
+                  <img
+                    className="margin-negative"
+                    src={FooterLogo}
+                    alt="Ikigai marketer"
+                  />
+                  </div>
+                </Fade>
             </div>
           </div>
         </div>
