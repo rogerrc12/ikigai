@@ -83,7 +83,7 @@ const IndexPage = ({ data }) => {
         </div>
         {/* eof flexslider */}
         
-          <div className="flexslider-bottom ">
+          <div className="flexslider-bottom d-none d-md-block">
             <Pulse delay={1600} forever>
               <span className="mouse-button" />
             </Pulse>
