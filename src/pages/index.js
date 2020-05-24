@@ -6,6 +6,8 @@ import Services from '../components/Services';
 import Steps from '../components/Steps';
 import MiniContact from '../components/MiniContact';
 import parser from 'html-react-parser';
+import { Fade } from 'react-reveal';
+import Pulse from 'react-reveal/Pulse';
 import VerticalLine from "../assets/img/vertical_line.png"
 import VerticalLine2 from "../assets/img/vertical_line2.png"
 import PinkLine from "../assets/img/pink_line_big.png"
@@ -48,18 +50,27 @@ const IndexPage = ({ data }) => {
             <div className="container">
               <div className="row">
                 <div className="col-12 intro_slider">
-                  <p className="text-uppercase intro_after_featured_word">Ikigai Marketer</p>
-                  <h2 className="text-uppercase intro_featured_word">
-                    Marketing Digital
-                  </h2>
-                  <h3 className="intro_before_featured_word">
-                    <span className="color-main1">Web Design</span>,{" "}
-                    <span className="color-main2">Marketing</span> &{" "}
-                    <span className="color-main3">Branding</span>
-                  </h3>
-                  <div className="intro_layer page-bottom">
-                    <Link className="btn btn-maincolor" to="/services">Comencemos</Link>
-                  </div>
+                  <Fade big delay={200}>
+                    <p className="text-uppercase intro_after_featured_word">Ikigai Marketer</p>
+                  </Fade>
+                  
+                  <Fade right delay={700} duration={1300}>
+                    <h2 className="text-uppercase intro_featured_word" data-sal="slide-right">
+                      Marketing Digital
+                    </h2>
+                  </Fade>
+                  
+                  <Fade bottom delay={1000}>
+                    <h3 className="intro_before_featured_word">
+                      <span className="color-main1">Web Design</span>,{" "}
+                      <span className="color-main2">Marketing</span> &{" "}
+                      <span className="color-main3">Branding</span>
+                    </h3>
+                  </Fade>
+                  
+                    <div className="intro_layer page-bottom">
+                      <Link className="btn btn-maincolor" to="/services">Comencemos</Link>
+                    </div>
             
                 </div>
             
@@ -71,10 +82,12 @@ const IndexPage = ({ data }) => {
           
         </div>
         {/* eof flexslider */}
-  
-        <div className="flexslider-bottom d-none d-xl-block">
-          <span className="mouse-button animated floating" />
-        </div>
+        
+          <div className="flexslider-bottom ">
+            <Pulse delay={1600} forever>
+              <span className="mouse-button" />
+            </Pulse>
+          </div>
       </section>
       
       <div className="divider-10 d-block d-sm-none" />

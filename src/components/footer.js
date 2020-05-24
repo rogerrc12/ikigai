@@ -1,5 +1,6 @@
 import React from "react"
 import FooterLogo from "../assets/images/footer_logo.svg"
+import Fade from "react-reveal/Fade";
 
 const footer = () => {
   return (
@@ -9,16 +10,13 @@ const footer = () => {
           <div className="container">
             <div className="row">
               <div className="divider-20 d-none d-xl-block" />
-              <div
-                className="col-md-12 mt-4 text-center animate footer_logo"
-                data-animation="fadeInUp"
-              >
+              <Fade bottom delay={300}>
                 <img
                   className="margin-negative"
                   src={FooterLogo}
                   alt="Ikigai marketer"
                 />
-              </div>
+              </Fade>
             </div>
           </div>
         </div>

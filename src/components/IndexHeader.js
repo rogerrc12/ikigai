@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import Logo from "../assets/images/logo.svg"
 import { Link } from "gatsby"
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const IndexHeader = () => {
   const [state, setState] = useState({ fixed: false, active: false })
@@ -77,7 +78,7 @@ const IndexHeader = () => {
                   <nav className="mainmenu_side_wrapper">
                     <ul className="nav menu-click">
                       <li className="active">
-                        <Link to="/">Inicio</Link>
+                        <AniLink paintDrip duration={1} hex="#A62557" to="/">Inicio</AniLink>
                       </li>
                       <li>
                         <Link to="/about">Acerca</Link>
@@ -96,7 +97,7 @@ const IndexHeader = () => {
                       </li>
                       {/* eof blog */}
                       <li>
-                        <Link to="/contact">Contacto</Link>
+                        <AniLink paintDrip duration={1} hex="#A62557" to="/contact">Contacto</AniLink>
                       </li>
                       {/* eof contacts */}
                     </ul>

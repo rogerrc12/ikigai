@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react"
 import { Link } from "gatsby"
 import Logo from "../assets/images/logo.svg"
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Header = ({ sectionTitle, slug }) => {
   const [active, setActive] = useState(false)
@@ -30,9 +31,9 @@ const Header = ({ sectionTitle, slug }) => {
                 <nav className="top-nav">
                   <ul className="nav sf-menu sf-js-enabled sf-arrows">
                     <li>
-                      <Link to="/" activeClassName="active">
+                      <AniLink paintDrip duration={1} hex="#A62557" to="/" activeClassName="active">
                         <span>Inicio</span>
-                      </Link>
+                      </AniLink>
                     </li>
                     <li>
                       <Link to="/about" activeClassName="active">
@@ -55,9 +56,9 @@ const Header = ({ sectionTitle, slug }) => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/contact" activeClassName="active">
+                      <AniLink paintDrip duration={1} hex="#A62557" to="/contact" activeClassName="active">
                         <span>Contacto</span>
-                      </Link>
+                      </AniLink>
                     </li>
                   </ul>
                 </nav>
