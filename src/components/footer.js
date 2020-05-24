@@ -31,7 +31,7 @@ const footer = () => {
             <div className="col-md-12 text-center">
               <p>
                 © Copyright
-                <span className="copyright_year">2018</span> All Rights Reserved
+                <span className="copyright_year">2020</span> All Rights Reserved
               </p>
             </div>
             <div className="divider-20 d-none d-lg-block" />

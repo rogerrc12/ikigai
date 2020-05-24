@@ -24,6 +24,14 @@ const PortfolioGallery = () => {
       media2: file(relativePath: { eq: "gallery/media02.jpg" }) {
           childImageSharp { original { src } }
       }
+
+      graphic1: file(relativePath: { eq: "gallery/graphic1.jpg" }) {
+          childImageSharp { original { src } }
+      }
+
+      graphic2: file(relativePath: { eq: "gallery/graphic2.jpg" }) {
+          childImageSharp { original { src } }
+      }
     }
   `)
 
@@ -79,19 +87,21 @@ const PortfolioGallery = () => {
           <div className="col-xl-6 col-sm-6 web-design design">
             <div className="vertical-item item-gallery content-absolute gallery text-center ls">
               <div className="item-media">
-                {/*<img*/}
-                {/*  src={data.portfolio1.childImageSharp.original.src}*/}
-                {/*  alt="Portfolio 1"*/}
-                {/*/>*/}
-                <div className="media-links"></div>
+                <img
+                  src={data.graphic1.childImageSharp.original.src}
+                  alt="Portfolio 1"
+                />
+                <div className="media-links"/>
               </div>
               <div className="item-content">
                 <h6>
-                  <a className="tags small-text" href="/gallery-item.html">
-                    Photo
+                  <a className="tags small-text" href={data.graphic1.childImageSharp.original.src} target="_blank" rel="noopener noreferrer">
+                    Miami Arts & Technology
                   </a>
                   <br />
-                  <a href="/gallery-item.html">Lorem ipsum dolor sit</a>
+                  <a href={data.graphic1.childImageSharp.original.src} target="_blank" rel="noopener noreferrer">
+                    Diseño y creación de logo
+                  </a>
                 </h6>
               </div>
             </div>
@@ -100,19 +110,21 @@ const PortfolioGallery = () => {
           <div className="col-xl-6 col-sm-6 advertisement branding">
             <div className="vertical-item item-gallery content-absolute gallery text-center ls">
               <div className="item-media">
-                {/*<img*/}
-                {/*  src={data.portfolio2.childImageSharp.original.src}*/}
-                {/*  alt="Portfolio 2"*/}
-                {/*/>*/}
+                <img
+                  src={data.graphic2.childImageSharp.original.src}
+                  alt="Portfolio 2"
+                />
                 <div className="media-links"/>
               </div>
               <div className="item-content">
                 <h6>
-                  <a className="tags small-text" href="/gallery-item.html">
-                    Photo
+                  <a className="tags small-text" href={data.graphic2.childImageSharp.original.src} target="_blank" rel="noopener noreferrer">
+                    Atlantida SCS
                   </a>
                   <br />
-                  <a href="/gallery-item.html">Amet consetetur sadip</a>
+                  <a href={data.graphic2.childImageSharp.original.src} target="_blank" rel="noopener noreferrer">
+                    Creación de imagen corporativa
+                  </a>
                 </h6>
               </div>
             </div>
