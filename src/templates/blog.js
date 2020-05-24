@@ -29,7 +29,7 @@ const Blog = ({ pageContext }) => {
           </div>
 
           <div className="row c-gutter-60">
-            <main className="col-12">
+            <main className="col-lg-8 col-xl-10">
               {posts.map((post, i) => (
                 <article key={i} className="text-md-left vertical-item blog-padding ls ms post type-post status-publish format-standard has-post-thumbnail sticky">
                   <div className="post-thumb">
@@ -110,7 +110,7 @@ const Blog = ({ pageContext }) => {
 							</nav>
             </main>
 
-            {/*<aside className="col-lg-5 col-xl-4 order-lg-1">*/}
+            {/*<aside className="col-lg-5 col-xl-4">*/}
             {/*  <div className="categories-dropdown">*/}
             {/*    <div className="widget widget_categories dropdown">*/}
             {/*      <h3 className="widget-title">Categories</h3>*/}
