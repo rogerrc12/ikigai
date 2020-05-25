@@ -29,7 +29,7 @@ const Blog = ({ pageContext }) => {
           </div>
 
           <div className="row c-gutter-60">
-            <main className="col-lg-8 col-xl-10">
+            <main className="col-lg-7 col-xl-8 order-2">
               {posts.map((post, i) => (
                 <article key={i} className="text-md-left vertical-item blog-padding ls ms post type-post status-publish format-standard has-post-thumbnail sticky">
                   <div className="post-thumb">
@@ -110,40 +110,7 @@ const Blog = ({ pageContext }) => {
 							</nav>
             </main>
 
-            {/*<aside className="col-lg-5 col-xl-4">*/}
-            {/*  <div className="categories-dropdown">*/}
-            {/*    <div className="widget widget_categories dropdown">*/}
-            {/*      <h3 className="widget-title">Categories</h3>*/}
-            
-            {/*      <form action="/">*/}
-            {/*        <label className="screen-reader-text" htmlFor="cat">*/}
-            {/*          Categories dropdown*/}
-            {/*        </label>*/}
-            {/*        <select name="cat" id="cat" className="postform">*/}
-            {/*          <option value="-1">Select Category</option>*/}
-            {/*          <option className="level-0" value="3">*/}
-            {/*            Corporate*/}
-            {/*          </option>*/}
-            {/*          <option className="level-0" value="4">*/}
-            {/*            Business*/}
-            {/*          </option>*/}
-            {/*          <option className="level-0" value="5">*/}
-            {/*            Entertainment*/}
-            {/*          </option>*/}
-            {/*          <option className="level-0" value="6">*/}
-            {/*            Innovations*/}
-            {/*          </option>*/}
-            {/*          <option className="level-0" value="8">*/}
-            {/*            News*/}
-            {/*          </option>*/}
-            {/*          <option className="level-0" value="9">*/}
-            {/*            Knowledge*/}
-            {/*          </option>*/}
-            {/*        </select>*/}
-            {/*      </form>*/}
-            {/*    </div>*/}
-            {/*  </div>*/}
-            {/*</aside>*/}
+            <aside className="col-lg-5 col-xl-4 order-1"></aside>
           </div>
         </div>
       </section>
