@@ -43,8 +43,9 @@ const Layout = ({ location, children, sectionTitle, slug }) => {
           <Footer />
           
         </div>
+  
+        <SocialIcons />
         
-        {location !== '/' ? <SocialIcons /> : null}
         {location !== '/contact' 
           ? <a href="https://wa.me/51918371703?text=Estoy%20interesado%20en%20sus%20servicios"
                className="whatsapp-btn" target="_blank" rel="noopener noreferrer"
