@@ -119,7 +119,7 @@ const PortfolioGallery = () => {
               <div className="item-content">
                 <h6>
                   <a className="tags small-text" href={data.graphic2.childImageSharp.original.src} target="_blank" rel="noopener noreferrer">
-                    Atlantida SCS
+                    Imágenes Gráficas
                   </a>
                   <br />
                   <a href={data.graphic2.childImageSharp.original.src} target="_blank" rel="noopener noreferrer">
