@@ -3,7 +3,8 @@ import Layout from "../components/layout"
 import parser from "html-react-parser"
 import Head from "../components/head"
 import { graphql, Link } from "gatsby"
-import Slider from "../components/TestimonalSlider"
+import Slider from "../components/TestimonalSlider";
+import useSiteMetadata from '../hooks/siteMetaData';
 
 export const query = graphql`
   query($slug: String!) {
@@ -20,17 +21,18 @@ export const query = graphql`
   }
 `
 
-const Service = ({ data }) => {
+const Service = ({ data, location }) => {
   const { servicios: { nodes: servicios } } = data.allServices;
   const { servicioBy } = data.singleService
   const { servicesList, advantages } = data.singleService.servicioBy.addons;
+  const { siteMetadata: { url } } = useSiteMetadata();
   
   return (
     <Layout
       location={`/services/${servicioBy.slug}`}
       sectionTitle={servicioBy.title}
     >
-      <Head title={servicioBy.title} />
+      <Head title={servicioBy.title} url={url + location.pathname} />
 
       <section className="ls s-pt-30 s-pb-50 s-pt-lg-50 s-pb-lg-100 c-mb-50 service-item4">
         <div className="d-none d-lg-block divider-65"/>

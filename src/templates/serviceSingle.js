@@ -2,6 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import parser from 'html-react-parser';
+import useSiteMetadata from '../hooks/siteMetaData';
+import Head from "../components/head"
 
 export const query = graphql`
     query($slug: ID!) {
@@ -18,13 +20,14 @@ export const query = graphql`
     }
 `;
 
-function ServiceSingle({ data }) {
+function ServiceSingle({ data, location }) {
   const { wordpress: { social_media: media } } = data;
-  
-  console.log(media)
+  const { siteMetadata: { url } } = useSiteMetadata();
+
   
   return (
     <Layout location={`/services/social-media/${media.slug}`} slug={media.slug} sectionTitle={media.title}>
+      <Head title={media.title} url={url + location.pathname} />
       <section className="ls s-pt-50 s-pb-130 c-gutter-60 event-single">
         <div className="container">
           <div className="row">

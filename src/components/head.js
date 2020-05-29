@@ -8,24 +8,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import useSiteMetaData from '../hooks/siteMetaData';
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
+function SEO({ description, keywords, lang, meta, title, url }) {
+  const { siteMetadata } = useSiteMetaData();
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || siteMetadata.description;
+  const metaKeywords = keywords || siteMetadata.keywords;
+  const metaUrl = url || siteMetadata.url;
 
   return (
     <Helmet
@@ -33,8 +23,12 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${siteMetadata.title}`}
       meta={[
+        {
+          name: 'keywords',
+          content: metaKeywords
+        },
         {
           name: `description`,
           content: metaDescription,
@@ -52,12 +46,24 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `website`,
+        },
+        {
+          property: `og:locale`,
+          content: `es_ES`,
+        },
+        {
+          property: `og:url`,
+          content: metaUrl,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: siteMetadata.author,
         },
         {
           name: `twitter:title`,
@@ -69,6 +75,7 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
+      <link rel="canonical" href={metaUrl} />
       <script src="https://apps.elfsight.com/p/platform.js" defer/>
     </Helmet>
   )
@@ -77,7 +84,7 @@ function SEO({ description, lang, meta, title }) {
 SEO.defaultProps = {
   lang: `es`,
   meta: [],
-  description: ``,
+  description: `Somos una agencia creativa digital especializada en la comunicación omnicanal. `,
 }
 
 SEO.propTypes = {

@@ -3,12 +3,14 @@ import Layout from "../components/layout"
 import Head from "../components/head";
 import { graphql, Link } from 'gatsby';
 import parser from 'html-react-parser';
-import Moment from "react-moment"
+import Moment from "react-moment";
+import useSiteMetadata from '../hooks/siteMetaData';
 
 export const query = graphql`
   query ($slug: String!){
     wordpress {
       postBy(slug: $slug) {
+          title
           content
           featuredImage { altText sourceUrl(size: LARGE) }
           author { avatar { url } name }
@@ -19,13 +21,13 @@ export const query = graphql`
   }
 `;
 
-const Post = ({ data }) => {
+const Post = ({ data, location }) => {
   const { wordpress: { postBy: post } } = data;
-  console.log(post);
+  const { siteMetadata: { url } } = useSiteMetadata();
 
   return (
-    <Layout location="/blog" sectionTitle="blog">
-      <Head title="blog" />
+    <Layout location="/blog" sectionTitle={post.title}>
+      <Head title={post.title} url={url + location.pathname} />
       <section className="ls s-pt-50 s-pb-130 c-gutter-60 post5">
         <div className="container">
           <div className="row">
@@ -69,7 +71,7 @@ const Post = ({ data }) => {
                         tags:{" "}
                       </span>
                       {post.tags.nodes.map(tag => (
-                        <Link className="tags" to="/blog">
+                        <Link className="tags" to="/blog" key={tag.name}>
                           {tag.name}<span>,</span>
                         </Link>
                       ))}

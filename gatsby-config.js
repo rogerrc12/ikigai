@@ -5,8 +5,10 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Ikigai Marketer`,
-    description: `Ofrecemos el mejor servicio de marketing digital del mercado.`,
-    author: `@rogerrc12`,
+    description: `Ofrecemos el mejor servicio de marketing digital del perú.`,
+    author: `Roger Rengifo`,
+    keywords: 'social media, desarrllo web, web design, web development, digital, agencia, marketing, lima, publicidad',
+    url: 'https://ikigaimarketer.com'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

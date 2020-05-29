@@ -4,7 +4,8 @@ import Head from "../components/head"
 import TeamSlider from "../components/TeamSlider";
 import PortfolioList from '../components/PortfolioList';
 import Map from "../components/GoogleMaps"
-import { graphql } from "gatsby"
+import { graphql } from "gatsby";
+import useSiteMetadata from '../hooks/siteMetaData';
 
 export const originalImage = graphql`
   fragment OriginalImage on File {
@@ -30,10 +31,12 @@ export const query = graphql`
   }
 `
 
-const About = ({ data }) => {
+const About = ({ data, location }) => {
+  const { siteMetadata: { url } } = useSiteMetadata();
+
   return (
     <Layout location="/about" sectionTitle="Acerca de Ikigai">
-      <Head title="Acerca de Ikigai" />
+      <Head title="Acerca de Ikigai" url={url + location.pathname} />
 
       {/* Quote */}
       <section className="s-pt-30 s-pt-lg-50 ls about">

@@ -5,8 +5,10 @@ import BlogSlider from "../components/BlogSlider";
 import Moment from "react-moment";
 import { Link } from "gatsby";
 import parser from 'html-react-parser';
+import useSiteMetadata from '../hooks/siteMetaData';
 
-const Blog = ({ pageContext }) => {
+const Blog = ({ pageContext, location }) => {
+  const { siteMetadata: { url } } = useSiteMetadata();
 
   const { group: posts, index, first, last, pageCount } = pageContext;
   const previousUrl = index - 1 === 1 ? '/' : (index - 1).toString();
@@ -14,7 +16,7 @@ const Blog = ({ pageContext }) => {
 
   return (
     <Layout location="/blog" sectionTitle="Blog">
-      <Head title="blog" />
+      <Head title="Blog" url={url + location.pathname} />
 
       <section className="ls s-py-50 s-pt-lg-50 s-pb-lg-100 blog3">
         <div className="container">

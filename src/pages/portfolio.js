@@ -1,12 +1,15 @@
 import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import Gallery from "../components/PortfolioGallery"
+import Gallery from "../components/PortfolioGallery";
+import useSiteMetadata from '../hooks/siteMetaData';
 
-const Portfolio = () => {
+const Portfolio = ({ location }) => {
+  const { siteMetadata: { url } } = useSiteMetadata();
+
   return (
     <Layout location="/portfolio" sectionTitle="Portafolio">
-      <Head title="Portafolio" />
+      <Head title="Portafolio" url={url + location.pathname} />
 
       <section className="ls s-pt-50 s-pb-100 gallery-cols">
         <div className="d-none d-lg-block divider-20"/>

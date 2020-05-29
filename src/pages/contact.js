@@ -2,11 +2,14 @@ import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import MiniContact from "../components/MiniContact";
+import useSiteMetadata from '../hooks/siteMetaData';
 
-const Contact = ({ data }) => {
+const Contact = ({ location }) => { 
+  const { siteMetadata: { url } } = useSiteMetadata();
+
   return (
     <Layout location="/contact" sectionTitle="Contáctanos">
-      <Head title="Contacto" />
+      <Head title="Contacto" url={url +  location.pathname} />
       
       <MiniContact />
 

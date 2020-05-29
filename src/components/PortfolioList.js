@@ -34,7 +34,7 @@ function PortfolioList() {
             </a>
           </h6>
           <h6>
-            <a href={item.details.link} target="_blank" without rel="noopener noreferrer">{item.title}</a>
+            <a href={item.details.link} target="_blank" rel="noopener noreferrer">{item.title}</a>
           </h6>
         </div>
       </div>

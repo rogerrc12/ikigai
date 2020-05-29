@@ -1,7 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import { graphql, Link } from "gatsby"
+import { graphql, Link } from "gatsby";
+import useSiteMetadata from '../hooks/siteMetaData';
 
 export const query = graphql`
   {
@@ -23,14 +24,12 @@ export const query = graphql`
   }
 `
 
-const Services = ({
-  data: { wordpress: { servicios: { nodes: services }, },
-  },
-}) => {
+const Services = ({ data: { wordpress: { servicios: { nodes: services }, }, }, location }) => {
+  const { siteMetadata: { url } } = useSiteMetadata();
 
   return (
     <Layout location="/services" sectionTitle="Nuestros Servicios">
-      <Head title="Nuestros servicios" />
+      <Head title="Nuestros servicios" url={url + location.pathname} />
 
       <section className="ls s-pt-50 s-pb-100 s-pb-lg-130 c-gutter-30 c-mb-30 service-item3">
         <div className="d-none d-lg-block divider-65" />
