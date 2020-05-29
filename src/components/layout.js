@@ -55,7 +55,7 @@ const Layout = ({ location, children, sectionTitle, slug }) => {
           ? <a href="https://wa.me/51918371703?text=Estoy%20interesado%20en%20sus%20servicios"
                className="whatsapp-btn" target="_blank" rel="noopener noreferrer"
             >
-              <i className="fa fa-envelope" style={{ marginRight: '5px' }} /> Consultoria gratuita
+              <i className="fa fa-envelope" style={{ marginRight: '5px' }} /> ¡Estoy interesado!
             </a> : null}
       </div>
     </>
