@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => {
   
   return (
     <Layout location="/">
-      <Head title="Agencia onmicanal" />
+      <Head title="Agencia de Marketing Digital" />
 
       {/* Slide Section */}
       <section className="page_slider main_slider home_slider">
