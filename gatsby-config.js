@@ -15,6 +15,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      trackingId: process.env.ANALYTICS_TRAKING_ID,
+      head: true,
+      cookieDomain: 'ikigaimarketer.com'
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
