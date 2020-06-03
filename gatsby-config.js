@@ -16,9 +16,9 @@ module.exports = {
     `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-plugin-google-analytics`,
-      trackingId: process.env.ANALYTICS_TRAKING_ID,
-      head: true,
-      cookieDomain: 'ikigaimarketer.com'
+      options: {
+        trackingId: "UA-168353581-1",
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
