@@ -52,7 +52,7 @@ const Layout = ({ location, children, sectionTitle, slug }) => {
         <SocialIcons />
         
         {location !== '/contact' 
-          ? <a href="https://wa.me/51918371703?text=Estoy%20interesado%20en%20sus%20servicios"
+          ? <a href="https://wa.me/51917685797?text=Estoy%20interesado%20en%20sus%20servicios"
                className="whatsapp-btn" target="_blank" rel="noopener noreferrer"
             >
               <i className="fa fa-envelope" style={{ marginRight: '5px' }} /> ¡Estoy interesado!
