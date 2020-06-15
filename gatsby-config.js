@@ -21,6 +21,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-metricool`,
+      options: {
+        metricoolId: `39c80d58ccc10406042219f3bd04010`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-linkedin-insight`,
+      options: {
+        partnerId: `1453050`,
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
