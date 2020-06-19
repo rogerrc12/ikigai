@@ -34,7 +34,7 @@ function Services() {
         </div>
         <div className="item-content">
           <h6>
-            <Link to={`/services/${servicio.slug}`}>{servicio.title}</Link>
+            <Link to={`/servicios/${servicio.slug}`}>{servicio.title}</Link>
           </h6>
           {parser(servicio.excerpt)}
         </div>

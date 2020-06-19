@@ -49,7 +49,7 @@ async function createServicePages ({ graphql, actions }) {
   services.map(service =>
     createPage({
       component: serviceTemplate,
-      path: `/services/${service.slug}`,
+      path: `/servicios/${service.slug}`,
       context: { slug: service.slug },
     })
   )
@@ -70,7 +70,7 @@ async function createSocialMediaPages ({ graphql, actions }) {
   socialMediaSlugs.map(media => {
     createPage({
       component: singleTemplate,
-      path: `/services/social-media/${media.slug}`,
+      path: `/servicios/social-media/${media.slug}`,
       context: { slug: media.slug }
     })
   })

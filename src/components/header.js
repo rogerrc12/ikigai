@@ -36,17 +36,17 @@ const Header = ({ sectionTitle, slug }) => {
                       </AniLink>
                     </li>
                     <li>
-                      <Link to="/about" activeClassName="active">
+                      <Link to="/acerca" activeClassName="active">
                         <span>Más de nosotros</span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services" activeClassName="active">
+                      <Link to="/servicios" activeClassName="active">
                         <span>Servicios</span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/portfolio" activeClassName="active">
+                      <Link to="/portafolio" activeClassName="active">
                         <span>Portafolio</span>
                       </Link>
                     </li>
@@ -56,7 +56,7 @@ const Header = ({ sectionTitle, slug }) => {
                       </Link>
                     </li>
                     <li>
-                      <AniLink paintDrip duration={1} hex="#A62557" to="/contact" activeClassName="active">
+                      <AniLink paintDrip duration={1} hex="#A62557" to="/contacto" activeClassName="active">
                         <span>Contacto</span>
                       </AniLink>
                     </li>

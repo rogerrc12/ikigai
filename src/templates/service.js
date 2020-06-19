@@ -45,7 +45,7 @@ const Service = ({ data, location }) => {
               <ul className="list">
                 {servicios.map(service => (
                   <li key={service.slug}>
-                    <Link to={`services/${service.slug}`}>
+                    <Link to={`servicios/${service.slug}`}>
                       {service.title}
                     </Link>
                   </li>
@@ -64,7 +64,7 @@ const Service = ({ data, location }) => {
                       {servicesList.map((addon, i) => (
                           servicioBy.slug === 'social-media'
                             ?
-                              <Link key={i} to={`/services/${servicioBy.slug}/${addon.slug}`}>
+                              <Link key={i} to={`/servicios/${servicioBy.slug}/${addon.slug}`}>
                                 <p className="progress-title">{addon.description}</p>
                               </Link>
                             : <p key={i} className="progress-title">{addon.description}</p>

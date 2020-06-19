@@ -39,7 +39,7 @@ const Services = ({ data: { wordpress: { servicios: { nodes: services }, }, }, l
               <div className="col-lg-4 col-md-6 col-sm-12" key={service.slug}>
                 <div className="vertical-item text-center">
                   <div className="item-media">
-                    <Link to={`/services/${service.slug}`}>
+                    <Link to={`/servicios/${service.slug}`}>
                       <img
                         src={service.addons.thumbnail.sourceUrl}
                         alt={service.addons.thumbnail.altText}
@@ -48,14 +48,14 @@ const Services = ({ data: { wordpress: { servicios: { nodes: services }, }, }, l
                   </div>
                   <div className="item-content hero-bg">
                     <h6>
-                      <Link to={`/services/${service.slug}`}>
+                      <Link to={`/servicios/${service.slug}`}>
                         {service.title}
                       </Link>
                     </h6>
                     <div
                       dangerouslySetInnerHTML={{ __html: service.excerpt }}
                     />
-                    <Link to={`/services/${service.slug}`} className="btn-link">
+                    <Link to={`/servicios/${service.slug}`} className="btn-link">
                       Ver más
                     </Link>
                   </div>

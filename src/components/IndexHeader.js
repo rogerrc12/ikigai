@@ -81,15 +81,15 @@ const IndexHeader = () => {
                         <AniLink paintDrip duration={1} hex="#A62557" to="/">Inicio</AniLink>
                       </li>
                       <li>
-                        <Link to="/about">Acerca</Link>
+                        <Link to="/acerca">Acerca</Link>
                       </li>
                       <li>
-                        <Link to="/services">Servicios</Link>
+                        <Link to="/servicios">Servicios</Link>
                       </li>
                       {/* blog */}
                       {/* gallery */}
                       <li>
-                        <Link to="/portfolio">Portafolio</Link>
+                        <Link to="/portafolio">Portafolio</Link>
                       </li>
                       {/* eof Gallery */}
                       <li>
@@ -97,7 +97,7 @@ const IndexHeader = () => {
                       </li>
                       {/* eof blog */}
                       <li>
-                        <AniLink paintDrip duration={1} hex="#A62557" to="/contact">Contacto</AniLink>
+                        <AniLink paintDrip duration={1} hex="#A62557" to="/contacto">Contacto</AniLink>
                       </li>
                       {/* eof contacts */}
                     </ul>
