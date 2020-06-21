@@ -15,15 +15,15 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        trackingId: "UA-168353581-1",
+        pixelId: `2742361825990979`,
       },
     },
     {
-      resolve: `gatsby-plugin-metricool`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        metricoolId: `39c80d58ccc10406042219f3bd04010`,
+        trackingId: "UA-168353581-1",
       },
     },
     {
