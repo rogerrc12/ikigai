@@ -1,6 +1,7 @@
 import React from "react"
 import FooterLogo from "../assets/images/footer_logo.svg"
 import Fade from "react-reveal/Fade";
+import { Link } from 'gatsby';
 
 const footer = () => {
   return (
@@ -33,6 +34,7 @@ const footer = () => {
                 © Copyright
                 <span className="copyright_year">2020</span> All Rights Reserved
               </p>
+              <Link to="/politicas-privacidad">Términos y condiciones</Link>
             </div>
             <div className="divider-20 d-none d-lg-block" />
           </div>
