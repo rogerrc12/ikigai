@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import TeamSlider from "../components/TeamSlider";
+// import TeamSlider from "../components/TeamSlider";
 import PortfolioList from '../components/PortfolioList';
 import Map from "../components/GoogleMaps"
 import { graphql } from "gatsby";
@@ -132,11 +132,11 @@ const About = ({ data, location }) => {
       </section>
 
       {/* Team slider */}
-      <section className="page_slider team_slider" id="team">
+      {/* <section className="page_slider team_slider" id="team">
         <div className="container-fluid">
           <TeamSlider />
         </div>
-      </section>
+      </section> */}
 
       <Map />
     </Layout>

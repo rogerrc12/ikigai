@@ -90,7 +90,7 @@ function SEO({ description, keywords, lang, meta, title, url }) {
 SEO.defaultProps = {
   lang: `es`,
   meta: [],
-  description: `Somos una agencia creativa digital especializada en la comunicación omnicanal. `,
+  description: `Somos una agencia creativa digital especializada en la comunicación digital.`,
 }
 
 SEO.propTypes = {

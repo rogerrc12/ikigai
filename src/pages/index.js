@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import TeamSlider from "../components/TeamSlider";
+// import TeamSlider from "../components/TeamSlider";
 import Services from '../components/Services';
 import Steps from '../components/Steps';
 import MiniContact from '../components/MiniContact';
@@ -169,20 +169,20 @@ const IndexPage = ({ data }) => {
             
           </div>
           
-          <div className="pink-line text-center">
+          {/* <div className="pink-line text-center">
             <img src={PinkLine} alt="pink line" />
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Team Slider Home */}
-      <section className="page_slider team_slider" id="team">
+      {/* <section className="page_slider team_slider" id="team">
         <div className="container-fluid">
           
           <TeamSlider />
           
         </div>
-      </section>
+      </section> */}
       
       {/* Let's get started */}
       <section className="s-pt-130 s-pt-md-50 ls text-section">
