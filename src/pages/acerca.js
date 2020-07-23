@@ -138,7 +138,12 @@ const About = ({ data, location }) => {
         </div>
       </section> */}
 
-      <Map />
+      <Map 
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyD1Ds1rJsnKvy9babSVYPIg5cXrMwGJ_Bo"
+        containerElement={<div style={{ height: "85vh", width: "100%" }} />}
+        mapElement={<div style={{ height: '100%' }} />}
+        loadingElement={<p>Cargando...</p>}
+      />
     </Layout>
   )
 }

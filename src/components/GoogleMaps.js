@@ -1,18 +1,16 @@
-import React from "react"
-import { Map, Marker, GoogleApiWrapper } from "google-maps-react"
+import React from "react";
+import { GoogleMap, withScriptjs, withGoogleMap } from 'react-google-maps';
 
 const GoogleMaps = props => {
   return (
-    <div id="map" style={{ height: "85vh", width: "100%" }}>
-      <Map
-        initialCenter={{ lat: -12.125978, lng: -77.047615 }}
-        zoom={17}
-        google={props.google}
-      >
-        <Marker position={{ lat: -12.113978, lng: -77.047615 }} />
-      </Map>
-    </div>
+      <GoogleMap
+        defaultZoom={17}
+        defaultCenter={{ lat: -12.125978, lng: -77.047615 }}
+      />
   )
 }
 
-export default GoogleApiWrapper({ apiKey: process.env.MAPS_KEY })(GoogleMaps)
+// <Marker position={{ lat: -12.113978, lng: -77.047615 }} />
+// 'AIzaSyD1Ds1rJsnKvy9babSVYPIg5cXrMwGJ_Bo'
+
+export default withScriptjs(withGoogleMap(GoogleMaps));

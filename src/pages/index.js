@@ -10,7 +10,7 @@ import { Fade } from 'react-reveal';
 import Pulse from 'react-reveal/Pulse';
 import VerticalLine from "../assets/img/vertical_line.png"
 import VerticalLine2 from "../assets/img/vertical_line2.png"
-import PinkLine from "../assets/img/pink_line_big.png"
+// import PinkLine from "../assets/img/pink_line_big.png"
 import BGVIdeoMp4 from '../assets/videos/background-video.mp4';
 import BgVIdeoWebm from '../assets/videos/background-video.webm';
 import { graphql, Link } from "gatsby";
@@ -69,7 +69,7 @@ const IndexPage = ({ data }) => {
                   </Fade>
                   
                     <div className="intro_layer page-bottom">
-                      <Link className="btn btn-maincolor" to="/services">Comencemos</Link>
+                      <Link className="btn btn-maincolor" to="/servicios">Comencemos</Link>
                     </div>
             
                 </div>
