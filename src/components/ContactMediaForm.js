@@ -27,7 +27,7 @@ const ContactMediaForm = () => {
     setIsLoading(true);
     const body = JSON.stringify([[values.name, values.email, values.phone]]);
     const config = { method: "POST", body, headers: { "Content-Type": "application/json" } };
-    console.log(`${process.env.GOOGLE_SHEETS_URL}?tabId=Prospectos`);
+    console.log(`https://v1.nocodeapi.com/rogerrc12/google_sheets/torcFqdyCHuSCZGm?tabId=Prospectos`);
     try {
       const response = await (await fetch(`${process.env.GOOGLE_SHEETS_URL}?tabId=Prospectos`, config)).json();
 
