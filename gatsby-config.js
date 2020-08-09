@@ -1,14 +1,15 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
     title: `Ikigai Marketer`,
     description: `Ofrecemos el mejor servicio de marketing digital del perú.`,
     author: `Roger Rengifo`,
-    keywords: 'social media, desarrllo web, web design, web development, digital, agencia, marketing, lima, publicidad',
-    url: 'https://ikigaimarketer.com'
+    keywords:
+      "social media, desarrllo web, web design, web development, digital, agencia, marketing, lima, publicidad",
+    url: "https://ikigaimarketer.com",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,7 +31,7 @@ module.exports = {
       resolve: `gatsby-plugin-linkedin-insight`,
       options: {
         partnerId: `1453050`,
-      }
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -59,7 +60,7 @@ module.exports = {
         typeName: "WPGraphQL",
         fieldName: "wordpress",
         url: "https://wordpress.ikigaimarketer.com/graphql",
-        refetchInterval: 120
+        refetchInterval: 120,
       },
     },
     {
@@ -70,9 +71,9 @@ module.exports = {
         // Disable the loading spinner.
         showSpinner: true,
       },
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

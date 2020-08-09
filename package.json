@@ -5,8 +5,10 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@loadingio/loading.css": "^2.0.0",
     "antd": "^4.2.0",
     "dotenv": "^8.2.0",
+    "formik": "^2.1.5",
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
     "gatsby-paginate": "^1.1.1",
@@ -27,6 +29,7 @@
     "gsap": "^3.2.6",
     "html-react-parser": "^0.10.3",
     "i": "^0.3.6",
+    "ldbutton": "^1.0.2",
     "moment": "^2.24.0",
     "node-sass": "^4.14.1",
     "npm": "^6.14.5",
@@ -38,7 +41,8 @@
     "react-moment": "^0.9.7",
     "react-reveal": "^1.2.2",
     "react-slick": "^0.25.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "yup": "^0.29.3"
   },
   "devDependencies": {
     "prettier": "2.0.4"
