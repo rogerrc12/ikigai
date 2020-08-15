@@ -160,7 +160,7 @@ Border color for elements in color section: rgba(255, 255, 255, 0.15)
 }
 
 .social-media__info button:disabled {
-  opacity: .5;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
@@ -2487,8 +2487,7 @@ html[xmlns] .slides {
   -webkit-transition: -webkit-transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
   transition: -webkit-transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
   transition: transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
-  transition: transform 333ms cubic-bezier(0.4, 0, 0.22, 1),
-    -webkit-transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
+  transition: transform 333ms cubic-bezier(0.4, 0, 0.22, 1), -webkit-transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
   width: 100%;
 }
 
@@ -3533,15 +3532,11 @@ a.pswp__share--download:hover {
   top: -4px;
 }
 
-.scrollbar-macosx
-  > .scroll-element.scroll-x.scroll-scrolly_visible
-  .scroll-element_size {
+.scrollbar-macosx > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
   left: -11px;
 }
 
-.scrollbar-macosx
-  > .scroll-element.scroll-y.scroll-scrollx_visible
-  .scroll-element_size {
+.scrollbar-macosx > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
   top: -11px;
 }
 
@@ -6236,13 +6231,7 @@ img {
 
 .gradient-background:before {
   background: #ff497c;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(0%, #ff497c),
-    color-stop(100%, #a0ce4e)
-  );
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ff497c), color-stop(100%, #a0ce4e));
   background: -webkit-linear-gradient(left, #ff497c 0%, #a0ce4e 100%);
   background: linear-gradient(to right, #ff497c 0%, #a0ce4e 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$colorMain", endColorstr="$colorMain2", GradientType=1);
@@ -6257,16 +6246,8 @@ img {
 }
 
 .gradientdarken-background:before {
-  background: -webkit-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000", endColorstr="#00000000", GradientType=0);
 }
 
@@ -6276,23 +6257,9 @@ img {
   /* Chrome10+,Safari5.1+ */
   /* Opera 12+ */
   /* IE10+ */
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.24) 0%,
-    rgba(255, 255, 255, 0) 50%
-  );
-  background: -webkit-radial-gradient(
-    center,
-    ellipse,
-    rgba(255, 255, 255, 0.24) 0%,
-    rgba(255, 255, 255, 0) 50%
-  );
-  background: -webkit-radial-gradient(
-    center,
-    ellipse cover,
-    rgba(255, 255, 255, 0.24) 0%,
-    rgba(255, 255, 255, 0) 50%
-  );
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 50%);
+  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 50%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 50%);
   background: -webkit-gradient(
     radial,
     center center,
@@ -11246,10 +11213,8 @@ a img.aligncenter {
     padding: 13px 0 13px;
     text-decoration: none;
     text-transform: uppercase;
-    -webkit-transition-property: color, background-color, border-color,
-      padding-top, padding-bottom;
-    transition-property: color, background-color, border-color, padding-top,
-      padding-bottom;
+    -webkit-transition-property: color, background-color, border-color, padding-top, padding-bottom;
+    transition-property: color, background-color, border-color, padding-top, padding-bottom;
     zoom: 1;
   }
 
@@ -11929,10 +11894,8 @@ a img.aligncenter {
 .menu-click div.mega-menu {
   height: 0;
   overflow: hidden;
-  -webkit-transition: opacity 0.6s, margin-top 0.4s, margin-bottom 0.4s,
-    height 0.3s ease-in-out;
-  transition: opacity 0.6s, margin-top 0.4s, margin-bottom 0.4s,
-    height 0.3s ease-in-out;
+  -webkit-transition: opacity 0.6s, margin-top 0.4s, margin-bottom 0.4s, height 0.3s ease-in-out;
+  transition: opacity 0.6s, margin-top 0.4s, margin-bottom 0.4s, height 0.3s ease-in-out;
 }
 
 .menu-click ul li.sfHover > .mega-menu ul {
@@ -12664,9 +12627,7 @@ body.active-side-header.slide-right .page_header_side {
   }
 
   .header_side_sticked.header_side_right.active-slide-side-header ~ *,
-  .header_side_sticked.header_side_right.active-slide-side-header
-    ~ div
-    .page_header {
+  .header_side_sticked.header_side_right.active-slide-side-header ~ div .page_header {
     margin-left: 0;
     margin-right: 310px;
   }
@@ -12976,7 +12937,7 @@ body.active-side-header.slide-right .page_header_side {
   }
 
   .page_slider .intro_featured_word {
-    font-size: 7.5rem;
+    font-size: 5.5rem;
     font-weight: 600;
     margin-bottom: 20px;
     white-space: nowrap;
@@ -14341,9 +14302,7 @@ h4.comments-title {
   }
 }
 
-.blog-post.comments-area
-  .comment-respond
-  .form-control::-webkit-input-placeholder {
+.blog-post.comments-area .comment-respond .form-control::-webkit-input-placeholder {
   text-align: left;
 }
 
@@ -15231,11 +15190,7 @@ h4.comments-title {
   }
 }
 
-.post4
-  .comments-area.comment1.post3.post4
-  .comment-form
-  p.form-submit
-  input[type="submit"] {
+.post4 .comments-area.comment1.post3.post4 .comment-form p.form-submit input[type="submit"] {
   padding: 26px 0px;
 }
 
@@ -16086,20 +16041,12 @@ h4.comments-title {
   }
 }
 
-.blog-featured-posts
-  .vertical-item.content-padding.padding-small
-  .item-content {
+.blog-featured-posts .vertical-item.content-padding.padding-small .item-content {
   padding: 54px 60px 61px;
 }
 
-.blog-featured-posts
-  .vertical-item.content-padding.padding-small
-  .item-content
-  .entry-title,
-.blog-featured-posts
-  .vertical-item.content-padding.padding-small
-  .item-content
-  .entry-title:last-child {
+.blog-featured-posts .vertical-item.content-padding.padding-small .item-content .entry-title,
+.blog-featured-posts .vertical-item.content-padding.padding-small .item-content .entry-title:last-child {
   font-size: 24px;
   font-weight: 500;
   line-height: 1.2;
@@ -16107,18 +16054,11 @@ h4.comments-title {
   text-transform: none;
 }
 
-.blog-featured-posts
-  .vertical-item.content-padding.padding-small
-  .item-content
-  .post-author {
+.blog-featured-posts .vertical-item.content-padding.padding-small .item-content .post-author {
   margin-top: 30px;
 }
 
-.blog-featured-posts
-  .vertical-item.content-padding.padding-small
-  .item-content
-  .post-author
-  p {
+.blog-featured-posts .vertical-item.content-padding.padding-small .item-content .post-author p {
   margin-top: 11px;
 }
 
@@ -16389,11 +16329,7 @@ h4.comments-title {
   letter-spacing: 0.2em;
 }
 
-.related-post
-  .vertical-item.content-absolute
-  .item-content
-  p.item-meta
-  a:hover {
+.related-post .vertical-item.content-absolute .item-content p.item-meta a:hover {
   color: #fff;
 }
 
@@ -16535,6 +16471,7 @@ a.btn {
 .page_title h1,
 .page_title h2 {
   line-height: 1;
+  text-transform: capitalize;
 }
 
 @media (min-width: 992px) {
@@ -16994,23 +16931,17 @@ a.btn {
 
 .whatsapp-btn {
   position: fixed;
-  padding: 0.3rem 1rem;
-  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
   bottom: 1.5rem;
   right: 1.5rem;
   background-color: #128c7e;
   color: #fff;
   transition: 25ms ease-in-out;
-  font-size: 0.9rem;
+  font-size: 2rem;
   font-weight: 500;
   cursor: pointer;
   z-index: 999;
-}
-
-@media screen and (min-width: 900px) {
-  .whatsapp-btn {
-    font-size: 1.2rem;
-  }
 }
 
 .whatsapp-btn:focus,
@@ -17253,6 +17184,10 @@ a.btn {
   padding-bottom: 5rem;
 }
 
+.testimonials-sliders.testimonials-social {
+  padding-bottom: 10rem;
+}
+
 .testimonials-sliders .small-text.author-job {
   color: #ff497c;
   font-weight: 700;
@@ -17262,6 +17197,7 @@ a.btn {
 
 .testimonials-sliders h5 {
   padding-bottom: 11px;
+  color: #fff;
 }
 
 .testimonials-sliders .owl-theme .owl-dots {
@@ -17469,10 +17405,7 @@ a.btn {
   margin-bottom: 6px;
 }
 
-.single-member-carousel
-  .vertical-item.content-padding
-  .item-content
-  .social-icons {
+.single-member-carousel .vertical-item.content-padding .item-content .social-icons {
   margin: 30px 0 0;
 }
 
@@ -17802,10 +17735,7 @@ a.btn {
   padding: 16px 51px;
 }
 
-.team-single3
-  .tab-content
-  .contact-form
-  .form-control::-webkit-input-placeholder {
+.team-single3 .tab-content .contact-form .form-control::-webkit-input-placeholder {
   text-align: left;
 }
 
@@ -19456,13 +19386,7 @@ h4.margin {
 }
 
 .service-single-testimonials .owl-carousel .owl-dots .owl-dot.active span,
-.service-single-testimonials
-  .owl-carousel
-  .owl-dots
-  .owl-carousel
-  .owl-dots
-  .owl-dot:hover
-  span {
+.service-single-testimonials .owl-carousel .owl-dots .owl-carousel .owl-dots .owl-dot:hover span {
   background-color: #ff497c;
   border-color: #ff497c;
   opacity: 1;
@@ -19569,7 +19493,7 @@ h4.margin {
 }
 
 .video-post-section .video-content h1 {
-  left: -99px;
+  left: -39px;
   line-height: 50px;
   margin-bottom: 44px;
   position: relative;
@@ -19586,7 +19510,7 @@ h4.margin {
 }
 
 .video-post-section .video-content a {
-  left: -99px;
+  left: -39px;
   margin-top: 40px;
   position: relative;
   z-index: 3;
@@ -19610,6 +19534,9 @@ h4.margin {
 
 .video-post-section .embed-responsive {
   width: 96%;
+}
+.video-post-section .embed-responsive img {
+  width: 100%;
 }
 
 @media (max-width: 1199px) {
@@ -20117,10 +20044,7 @@ h4.margin {
   opacity: 1;
 }
 
-.blog-owl
-  .vertical-item.content-padding.padding-small
-  .item-content
-  .post-author {
+.blog-owl .vertical-item.content-padding.padding-small .item-content .post-author {
   margin-top: 44px;
 }
 

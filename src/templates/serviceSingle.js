@@ -5,6 +5,7 @@ import parser from "html-react-parser";
 import useSiteMetadata from "../hooks/siteMetaData";
 import Head from "../components/head";
 import ContactMediaForm from "../components/ContactMediaForm";
+import Testimonials from "../components/TestimonalSlider";
 
 export const query = graphql`
   query($slug: ID!) {
@@ -65,6 +66,9 @@ function ServiceSingle({ data, location }) {
             </main>
           </div>
         </div>
+        <article className="testimonials-sliders ds testimonials-social">
+          <Testimonials />
+        </article>
       </section>
     </Layout>
   );

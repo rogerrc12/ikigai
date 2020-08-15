@@ -1,25 +1,19 @@
-import React, { useState, useRef } from "react"
-import { Link } from "gatsby"
-import Logo from "../assets/images/logo.svg"
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import React, { useState, useRef } from "react";
+import { Link } from "gatsby";
+import Logo from "../assets/images/logo.svg";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Header = ({ sectionTitle, slug }) => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
   const headerRef = useRef(),
-        toggleRef = useRef();
+    toggleRef = useRef();
 
-  const onToggle = () => setActive(prevState => !prevState)
+  const onToggle = () => setActive((prevState) => !prevState);
 
   return (
     <>
-      <div
-        className="page_header_wrapper ds affix-top-wrapper"
-        style={{ height: "90px" }}
-      >
-        <header
-          className={`page_header ds affix ${active ? "mobile-active" : ""}`}
-          ref={headerRef}
-        >
+      <div className="page_header_wrapper ds affix-top-wrapper" style={{ height: "90px" }}>
+        <header className={`page_header ds affix ${active ? "mobile-active" : ""}`} ref={headerRef}>
           <div className="container-fluid">
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-3 col-11">
@@ -65,9 +59,13 @@ const Header = ({ sectionTitle, slug }) => {
               </div>
               <div className="col-xl-2 col-lg-3 text-lg-left text-xl-right d-none d-lg-block">
                 <div className="header_phone">
-                  <h6>
-                    <span>+51 </span>918 371 703
-                  </h6>
+                  <a
+                    href="https://wa.me/51917685797?text=Estoy%20interesado%20en%20sus%20servicios"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>+51 </span>917 685 797
+                  </a>
                 </div>
               </div>
             </div>
@@ -95,16 +93,20 @@ const Header = ({ sectionTitle, slug }) => {
                 <li className="breadcrumb-item">
                   <Link to="/">Home</Link>
                 </li>
-                {slug && <li className="breadcrumb-item"><Link to="/servicios/social-media">Social media marketing</Link></li>}
+                {slug && (
+                  <li className="breadcrumb-item">
+                    <Link to="/servicios/social-media">Social media marketing</Link>
+                  </li>
+                )}
                 <li className="breadcrumb-item active">{sectionTitle}</li>
               </ol>
-              <div className="divider-15 d-none d-xl-block"/>
+              <div className="divider-15 d-none d-xl-block" />
             </div>
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

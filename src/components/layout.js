@@ -1,9 +1,9 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Header from "./header"
-import IndexHeader from "./IndexHeader"
+import React from "react";
+import PropTypes from "prop-types";
+import Header from "./header";
+import IndexHeader from "./IndexHeader";
 import Footer from "./footer";
-import { Fade } from 'react-reveal';
+import { Fade } from "react-reveal";
 
 const SocialIcons = () => {
   return (
@@ -24,9 +24,9 @@ const SocialIcons = () => {
           </a>
         </div>
       </Fade>
-    </div> 
-  )
-}
+    </div>
+  );
+};
 
 const Layout = ({ location, children, sectionTitle, slug }) => {
   return (
@@ -37,33 +37,32 @@ const Layout = ({ location, children, sectionTitle, slug }) => {
 
       <div id="canvas">
         <div id="box_wrapper">
-          {location !== "/" ? (
-            <Header sectionTitle={sectionTitle} slug={slug} />
-          ) : (
-            <IndexHeader />
-          )}
+          {location !== "/" ? <Header sectionTitle={sectionTitle} slug={slug} /> : <IndexHeader />}
 
-          {location === "/blog" || `/servcies/social-media/${slug}` ?  children : <main>{children}</main>}
-  
+          {location === "/blog" || `/servcies/social-media/${slug}` ? children : <main>{children}</main>}
+
           <Footer />
-          
         </div>
-  
+
         <SocialIcons />
-        
-        {location !== '/contact' 
-          ? <a href="https://wa.me/51917685797?text=Estoy%20interesado%20en%20sus%20servicios"
-               className="whatsapp-btn" target="_blank" rel="noopener noreferrer"
-            >
-              <i className="fa fa-envelope" style={{ marginRight: '5px' }} /> ¡Estoy interesado!
-            </a> : null}
+
+        {location !== "/contact" ? (
+          <a
+            href="https://wa.me/51917685797?text=Estoy%20interesado%20en%20sus%20servicios"
+            className="whatsapp-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa fa-whatsapp" />
+          </a>
+        ) : null}
       </div>
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
